@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestión de Proyectos Viales</title>
 </head>
 <body>
-    a
+    <h1>Gestión de Proyectos Viales</h1>
+
+    <label>Nombre del proyecto:</label>
+    <input type="text" id="nombreProyecto"><br><br>
+
+    <label>Decripción:</label>
+    <input type="number" id="decripcion"><br><br>
+
+    <label>Presupuesto:</label>
+    <input type="text" id="presupuesto"><br><br>
+
+    <label>Fecha de inicio:</label>
+    <input type="number" id="fecha"><br><br>
+
+    <label>Estado</label>
+    <input type="text" id="estado"> <br><br>
+
+    <button type="button" id="guardar">Registrar Producto</button>
+    <br><br>
+    <div id="mensaje"></div>
+    <button type="button" id="Mostrar"> Mostrar Productos </button>
+    <div id="divProductos"></div>
+
+    <script type="module" src="../js/serviciosPublicos.js"></script>
 </body>
 </html>
