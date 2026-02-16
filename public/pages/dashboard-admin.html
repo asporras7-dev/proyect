@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Municipalidad de Escazú</title>
+</head>
+
+<body>
+    <header>
+        <h1>Panel Administrativo</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Menú de Navegación</h2>
+        <nav>
+            <ul>
+                <li><a href="#gestion-reportes">Gestión de Reportes</a></li>
+                <li><a href="#gestion-proyectos">Gestión de Proyectos Viales</a></li>
+                <li><a href="#gestion-servicios">Gestión de Servicios Públicos</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- CRUD 1: Gestión de Reportes -->
+        <section id="gestion-reportes">
+            <h2>Gestión de Reportes</h2>
+
+            <article>
+                <h3>Lista de Reportes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Ubicación</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Bache</td>
+                            <td>Bache profundo en vía principal</td>
+                            <td>Avenida Escazú, frente al parque</td>
+                            <td>Pendiente</td>
+                            <td>
+                                <form method="POST" action="/reportes/1">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Alumbrado</td>
+                            <td>Luz pública no funciona</td>
+                            <td>Calle Los Anonos</td>
+                            <td>En proceso</td>
+                            <td>
+                                <form method="POST" action="/reportes/2">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article>
+                <h3>Actualizar Estado de Reporte</h3>
+                <form method="POST" action="/reportes/actualizar">
+                    <input type="hidden" name="_method" value="PUT">
+
+                    <div>
+                        <label for="reporte-id">ID del Reporte:</label>
+                        <input type="number" id="reporte-id" name="reporte-id" required>
+                    </div>
+
+                    <div>
+                        <label for="estado-reporte">Nuevo Estado:</label>
+                        <select id="estado-reporte" name="estado-reporte" required>
+                            <option value="">Seleccione un estado</option>
+                            <option value="pendiente">Pendiente</option>
+                            <option value="en-proceso">En Proceso</option>
+                            <option value="completado">Completado</option>
+                            <option value="rechazado">Rechazado</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button type="submit">Actualizar Estado</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+
+        <!-- CRUD 2: Gestión de Proyectos Viales -->
+        <section id="gestion-proyectos">
+            <h2>Gestión de Proyectos Viales</h2>
+
+            <article>
+                <h3>Crear Nuevo Proyecto Vial</h3>
+                <form method="POST" action="/proyectos">
+                    <fieldset>
+                        <legend>Información del Proyecto</legend>
+
+                        <div>
+                            <label for="nombre-proyecto">Nombre del Proyecto:</label>
+                            <input type="text" id="nombre-proyecto" name="nombre-proyecto" required>
+                        </div>
+
+                        <div>
+                            <label for="descripcion-proyecto">Descripción:</label>
+                            <textarea id="descripcion-proyecto" name="descripcion-proyecto" rows="4"
+                                required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="presupuesto">Presupuesto:</label>
+                            <input type="number" id="presupuesto" name="presupuesto" step="0.01" required>
+                        </div>
+
+                        <div>
+                            <label for="fecha-inicio">Fecha de Inicio:</label>
+                            <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+                        </div>
+
+                        <div>
+                            <label for="estado-proyecto">Estado:</label>
+                            <select id="estado-proyecto" name="estado-proyecto" required>
+                                <option value="">Seleccione un estado</option>
+                                <option value="planificacion">Planificación</option>
+                                <option value="en-ejecucion">En Ejecución</option>
+                                <option value="finalizado">Finalizado</option>
+                                <option value="suspendido">Suspendido</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit">Crear Proyecto</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </article>
+
+            <article>
+                <h3>Lista de Proyectos Viales</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Presupuesto</th>
+                            <th>Fecha Inicio</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Repavimentación Avenida Central</td>
+                            <td>Renovación completa del asfalto</td>
+                            <td>₡50,000,000</td>
+                            <td>2026-03-01</td>
+                            <td>Planificación</td>
+                            <td>
+                                <form method="POST" action="/proyectos/1/editar">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <button type="submit">Editar</button>
+                                </form>
+                                <form method="POST" action="/proyectos/1">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Instalación de Señalización</td>
+                            <td>Colocación de nuevas señales de tránsito</td>
+                            <td>₡15,000,000</td>
+                            <td>2026-02-15</td>
+                            <td>En Ejecución</td>
+                            <td>
+                                <form method="POST" action="/proyectos/2/editar">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <button type="submit">Editar</button>
+                                </form>
+                                <form method="POST" action="/proyectos/2">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- CRUD 3: Gestión de Servicios Públicos -->
+        <section id="gestion-servicios">
+            <h2>Gestión de Servicios Públicos</h2>
+
+            <article>
+                <h3>Crear Nuevo Servicio Público</h3>
+                <form method="POST" action="/servicios">
+                    <fieldset>
+                        <legend>Información del Servicio</legend>
+
+                        <div>
+                            <label for="tipo-servicio">Tipo de Servicio:</label>
+                            <select id="tipo-servicio" name="tipo-servicio" required>
+                                <option value="">Seleccione un tipo</option>
+                                <option value="recoleccion-residuos">Recolección de Residuos</option>
+                                <option value="alumbrado-publico">Alumbrado Público</option>
+                                <option value="alcantarillado">Alcantarillado</option>
+                                <option value="zonas-verdes">Zonas Verdes</option>
+                                <option value="limpieza-vias">Limpieza de Vías</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="descripcion-servicio">Descripción:</label>
+                            <textarea id="descripcion-servicio" name="descripcion-servicio" rows="4"
+                                required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="responsable">Responsable:</label>
+                            <input type="text" id="responsable" name="responsable" required>
+                        </div>
+
+                        <div>
+                            <label for="estado-servicio">Estado:</label>
+                            <select id="estado-servicio" name="estado-servicio" required>
+                                <option value="">Seleccione un estado</option>
+                                <option value="activo">Activo</option>
+                                <option value="inactivo">Inactivo</option>
+                                <option value="mantenimiento">En Mantenimiento</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit">Crear Servicio</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </article>
+
+            <article>
+                <h3>Lista de Servicios Públicos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Responsable</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Recolección de Residuos</td>
+                            <td>Servicio de recolección semanal</td>
+                            <td>Juan Pérez</td>
+                            <td>Activo</td>
+                            <td>
+                                <form method="POST" action="/servicios/1/editar">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <button type="submit">Editar</button>
+                                </form>
+                                <form method="POST" action="/servicios/1">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Alumbrado Público</td>
+                            <td>Mantenimiento de luminarias</td>
+                            <td>María González</td>
+                            <td>Activo</td>
+                            <td>
+                                <form method="POST" action="/servicios/2/editar">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <button type="submit">Editar</button>
+                                </form>
+                                <form method="POST" action="/servicios/2">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Municipalidad de Escazú. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
