@@ -47,7 +47,7 @@
 
                     <div>
                         <label for="reporte-id">ID del Reporte:</label>
-                        <input type="number" id="reporte-id" name="reporte-id" required>
+                        <input type=text" id="reporte-id" name="reporte-id" required>
                     </div>
 
                     <div>
@@ -62,9 +62,24 @@
                     </div>
 
                     <div>
-                        <button type="submit">Actualizar Estado</button>
+                        <button id="btn-editar">Actualizar Estado</button>
                     </div>
                 </form>
+            </article>
+            <article>
+                <h3>Eliminar Reporte</h3>
+                <div>
+                    <input type="hidden" name="_method" value="PUT">
+
+                    <div>
+                        <label for="reporte-id-delete">ID del Reporte:</label>
+                        <input type=text" id="reporte-id-delete" name="reporte-id-delete" required>
+                    </div>
+
+                    <div>
+                        <button id="btn-eliminar">Eliminar Reporte</button>
+                    </div>
+                </div>
             </article>
         </section>
 

@@ -44,25 +44,26 @@
       "rol": "ciudadano"
     }
   ],
-
   "reportes": [
-    {
-      "tipo": "infraestructura vial",
-      "descripcion": "Alumbrado público",
-      "ubicacion": "",
-      "id": "7b3e"
-    },
     {
       "id": "3fe9",
       "tipo": "",
       "descripcion": "Bache en la avenida central",
-      "ubicacion": ""
+      "ubicacion": "",
+      "estado": "pendiente"
     },
     {
       "id": "ee11",
       "tipo": "Problema",
       "descripcion": "",
-      "ubicacion": "t"
+      "ubicacion": "t",
+      "estado": "pendiente"
+    },
+    {
+      "id": "88c2",
+      "tipo": "Problema",
+      "descripcion": "...",
+      "ubicacion": "Tangamandapio"
     }
   ]
 }
