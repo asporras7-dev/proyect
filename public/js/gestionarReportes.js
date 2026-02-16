@@ -1,17 +1,24 @@
 import { getReportes } from "../services/serviciosReportes.js";
+const div = document.getElementById("reportes");
 
-function renderizarProductos(){
-    let reporte = getReportes();
-    const p = document.createElement("p");
-    p.textContent =      ;
-    const reportes = getReportes();
-    reportes.forEach(reporte => {
-        const div = document.createElement("div");
-        div.innerHTML = `
-            <p><strong>Tipo:</strong> ${reporte.tipo}</p>
-            <p><strong>Descripción:</strong> ${reporte.descripcion}</p>
-            <p><strong>Ubicación:</strong> ${reporte.ubicacion}</p>
-        `;
-        p.appendChild(div);
+async function renderizarReportes(){
+    const data = await getReportes();
+    data.forEach(element => {
+        console.log(element);
+        const p = document.createElement("p");
+        p.textContent = element.descripcion;
+        div.appendChild(p);
+        const btn = document.createElement("button");
+        btn.textContent = "Mostrar detalles";
+        div.appendChild(btn);
+        const p2 = document.createElement("p");
+        p2.textContent = element.id + " " + element.tipo + " " + element.descripcion + " " + element.ubicacion;
+        div.appendChild(p2);
+        p2.style.display = "none";
+        btn.addEventListener("click", function(){
+            p2.style.display = "block";
+        });
     });
 }
+
+renderizarReportes();

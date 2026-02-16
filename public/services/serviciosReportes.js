@@ -1,5 +1,6 @@
 export { reportarProblemas }
 export {getReportes}
+export {getReportesId}
 async function reportarProblemas(problema) {
     try {
         const reporte = await fetch("http://localhost:3004/reportes", {
@@ -26,5 +27,15 @@ async function getReportes(){
         return data;
     }catch (error){
         throw new Error("Error al obtener los reportes")
+    }
+}
+
+async function getReportesId(id){
+    try{
+        const reporte = await fetch("http://localhost:3004/reportes/"+id);
+        const data = await reporte.json();
+        return data;
+    }catch (error){
+        throw new Error("Error al obtener el reporte")
     }
 }

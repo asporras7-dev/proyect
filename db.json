@@ -2,20 +2,20 @@
   "reportes": [
     {
       "tipo": "infraestructura vial",
-      "descripcion": "",
+      "descripcion": "Alumbrado público",
       "ubicacion": "",
       "id": "7b3e"
     },
     {
       "id": "3fe9",
       "tipo": "",
-      "descripcion": "",
+      "descripcion": "Bache en la avenida central",
       "ubicacion": ""
     },
     {
       "id": "ee11",
       "tipo": "Problema",
-      "descripcion": "...",
+      "descripcion": "",
       "ubicacion": "t"
     }
   ]
