@@ -1,7 +1,22 @@
 {
-    "reportes": {
-        "tipo": "infraestructura viaL",
-        "descripción": "",
-        "ubicación": ""
-}
+  "reportes": [
+    {
+      "tipo": "infraestructura vial",
+      "descripcion": "",
+      "ubicacion": "",
+      "id": "7b3e"
+    },
+    {
+      "id": "3fe9",
+      "tipo": "",
+      "descripcion": "",
+      "ubicacion": ""
+    },
+    {
+      "id": "ee11",
+      "tipo": "Problema",
+      "descripcion": "...",
+      "ubicacion": "t"
+    }
+  ]
 }
