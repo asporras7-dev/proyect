@@ -1,5 +1,5 @@
 //GET
-async function getProductos() {
+async function getUsuarios() {
     try {
         const peticion = await fetch("http://localhost:3001/usuarios");
         const datos = await peticion.json();
@@ -13,9 +13,9 @@ async function getProductos() {
 
 
 //POST
-async function postProductos(producto) {
+async function postUsuarios(producto) {
     try {
-        const peticion = await fetch("http://localhost:3001/products", {
+        const peticion = await fetch("http://localhost:3001/usuarios", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -33,6 +33,6 @@ async function postProductos(producto) {
 
 
 //EXPORTACION
-export { getProductos, postProductos};
+export { getUsuarios, postUsuarios };
 
 
