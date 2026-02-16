@@ -1,4 +1,50 @@
 {
+  "usuarios": [
+    {
+      "id": "1",
+      "nombreCompleto": "Juan Perez",
+      "correo": "juan@correo.com",
+      "contrasenha": "1234",
+      "rol": "admin"
+    },
+    {
+      "id": "a79e",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    },
+    {
+      "id": "8994",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold2@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    },
+    {
+      "id": "0085",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold3@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    },
+    {
+      "id": "1893",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold6@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    }
+  ],
+
   "reportes": [
     {
       "tipo": "infraestructura vial",

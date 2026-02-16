@@ -1,55 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Municipalidad de Escazú</title>
+    <title>Login</title>
 </head>
 
 <body>
     <header>
         <h1>Municipalidad de Escazú</h1>
-        <nav>
+        <!--<nav>
             <ul>
                 <li><a href="home.html">Inicio</a></li>
-                <li><a href="register.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
-        </nav>
+        </nav>-->
     </header>
+    <h2>Iniciar Sesión</h2>
+    <p></p>
+    <div>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
 
-    <main>
-        <section>
-            <h2>Iniciar Sesión</h2>
-            <p>Ingrese sus credenciales para acceder al sistema.</p>
+        <label for="contrasenha">Contraseña:</label>
+        <input type="password" id="contrasenha" name="contrasenha" required>
 
-            <form method="POST" action="/login">
-                <fieldset>
-                    <legend>Autenticación</legend>
+        <p id="mensaje"></p>
+        <button type="button" id="btnIniciarSesion">Iniciar Sesión</button>
+        <p>¿No tiene una cuenta? <a href="../pages/registro.html">Regístrese aquí</a></p>
+    </div>
 
-                    <div>
-                        <label for="correo">Correo Electrónico:</label>
-                        <input type="email" id="correo" name="correo" required>
-                    </div>
-
-                    <div>
-                        <label for="contrasena">Contraseña:</label>
-                        <input type="password" id="contrasena" name="contrasena" required>
-                    </div>
-
-                    <div>
-                        <button type="submit">Iniciar Sesión</button>
-                    </div>
-                </fieldset>
-            </form>
-
-            <p>¿No tiene una cuenta? <a href="register.html">Regístrese aquí</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Municipalidad de Escazú. Todos los derechos reservados.</p>
-    </footer>
 </body>
+
+<script type="module" src="../js/login.js"></script>
 
 </html>
