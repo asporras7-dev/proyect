@@ -1,1 +1,10 @@
-{}
+{
+    "usuarios:": [
+        {
+            "id": 1,
+            "nombre": "Juan",
+            "apellido": "Perez",
+            "email": "correo@gmial.com"
+        }
+    ]
+}
