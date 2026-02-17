@@ -23,9 +23,18 @@ async function renderizarReportes() {
         p2.textContent = element.id + " " + element.tipo + " " + element.descripcion + " " + element.ubicacion + " " + element.estado;
         div.appendChild(p2);
         p2.style.display = "none";
+        const btnQuitar = document.createElement("button");
+        btnQuitar.textContent = "Quitar detalles";
+        div.appendChild(btnQuitar);
+        btnQuitar.style.display = "none";
         btn.addEventListener("click", function () {
             p2.style.display = "block";
+            btnQuitar.style.display = "block";
         });
+        btnQuitar.addEventListener("click", function(e){
+            p2.style.display = "none";
+            btnQuitar.style.display = "none";
+        })
     });
     btnEditar.addEventListener("click", function (e) {
         e.preventDefault();

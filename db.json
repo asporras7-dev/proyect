@@ -74,11 +74,11 @@
       "estado": "pendiente"
     },
     {
-      "id": "4dd1",
       "tipo": "Problema",
       "descripcion": "a",
       "ubicacion": "Tangamandapio",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "id": "4dd1"
     }
   ],
   "viales": [
