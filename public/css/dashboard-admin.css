@@ -353,6 +353,41 @@ select:focus {
     width: 100%;
 }
 
+/* --- Report Cards --- */
+.report-card {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.report-card:hover {
+    box-shadow: var(--shadow-sm);
+    border-color: var(--color-accent);
+}
+
+.report-card p {
+    margin-bottom: 0.5rem;
+}
+
+.report-details {
+    margin: 1rem 0;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.report-details p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.report-details span {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
 /* --- Footer --- */
 footer {
     padding: 2rem 3rem;

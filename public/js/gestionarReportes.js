@@ -12,29 +12,47 @@ async function renderizarReportes() {
     const data = await getReportes();
     div.textContent = "";
     data.forEach(element => {
-        console.log(element);
-        const p = document.createElement("p");
-        p.textContent = element.descripcion;
-        div.appendChild(p);
+        const reportCard = document.createElement("div");
+        reportCard.classList.add("report-card");
+        div.appendChild(reportCard);
+
+        const title = document.createElement("p");
+        title.innerHTML = `<strong>${element.descripcion}</strong>`;
+        reportCard.appendChild(title);
+
         const btn = document.createElement("button");
         btn.textContent = "Mostrar detalles";
         btn.classList.add("btn-outline");
-        div.appendChild(btn);
-        const p2 = document.createElement("p");
-        p2.textContent = element.id + " " + element.tipo + " " + element.descripcion + " " + element.ubicacion + " " + element.estado;
-        div.appendChild(p2);
-        p2.style.display = "none";
+        reportCard.appendChild(btn);
+
+        const detailsDiv = document.createElement("div");
+        detailsDiv.classList.add("report-details");
+        detailsDiv.style.display = "none";
+
+        detailsDiv.innerHTML = `
+            <p><span>ID:</span> ${element.id}</p>
+            <p><span>Tipo:</span> ${element.tipo}</p>
+            <p><span>Ubcación:</span> ${element.ubicacion}</p>
+            <p><span>Estado:</span> ${element.estado}</p>
+        `;
+        reportCard.appendChild(detailsDiv);
+
         const btnQuitar = document.createElement("button");
         btnQuitar.textContent = "Quitar detalles";
-        div.appendChild(btnQuitar);
+        btnQuitar.classList.add("btn-ghost");
         btnQuitar.style.display = "none";
+        reportCard.appendChild(btnQuitar);
+
         btn.addEventListener("click", function () {
-            p2.style.display = "block";
+            detailsDiv.style.display = "block";
             btnQuitar.style.display = "block";
+            btn.style.display = "none";
         });
-        btnQuitar.addEventListener("click", function(e){
-            p2.style.display = "none";
+
+        btnQuitar.addEventListener("click", function (e) {
+            detailsDiv.style.display = "none";
             btnQuitar.style.display = "none";
+            btn.style.display = "block";
         })
     });
     btnEditar.addEventListener("click", function (e) {
