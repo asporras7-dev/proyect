@@ -120,41 +120,63 @@ btnMostrar.addEventListener("click", async function () {
         });
 
 
-        // PATCH - Va a editar el estado del proyecto
-        btnEditar.addEventListener("click", async () => {
-            console.log(proyecto.id);
+      // PATCH - Editar todos los campos del proyecto
+btnEditar.addEventListener("click", async () => {
+    console.log(proyecto.id);
 
-            // Se limpia el detalle antes de que se edite
-            const detalleAnterior = div.querySelector(".detalle-info");
-            if (detalleAnterior) detalleAnterior.remove();
+    // Limpiar detalles si existen
+    const detalleAnterior = div.querySelector(".detalle-info");
+    if (detalleAnterior) detalleAnterior.remove();
 
-            const selectEstado = document.createElement("select");
-            const btnConfirmar = document.createElement("button");
-            btnConfirmar.textContent = "Confirmar edición";
+    const inputNombre       = document.createElement("input");
+    const inputDescripcion  = document.createElement("input");
+    const inputPresupuesto  = document.createElement("input");
+    const inputFecha        = document.createElement("input");
+    const inputEstado       = document.createElement("input");
+    const btnConfirmar      = document.createElement("button");
 
-            ["Pendiente", "En Proceso", "Resuelto"].forEach((opcion) => {
-                const opt = document.createElement("option");
-                opt.value = opcion;
-                opt.textContent = opcion;
-                selectEstado.appendChild(opt);
-            });
+    inputNombre.value       = proyecto.nombreProyecto;
+    inputDescripcion.value  = proyecto.descripcion;
+    inputPresupuesto.value  = proyecto.presupuesto;
+    inputFecha.type         = "date";
+    inputFecha.value        = proyecto.fecha;
+    inputEstado.value       = proyecto.estado;
+    btnConfirmar.textContent = "Confirmar edición";
 
-            div.appendChild(selectEstado);
-            div.appendChild(btnConfirmar);
+    div.appendChild(document.createElement("br")); // <-- Primera separación
+    div.appendChild(document.createElement("br")); // <-- Segunda separación
+    div.appendChild(inputNombre);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputDescripcion);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputPresupuesto);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputFecha);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputEstado);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(btnConfirmar);
 
-            btnConfirmar.addEventListener("click", async () => {
-                const estadoActualizado = {
-                    estado: selectEstado.value
-                };
+    btnConfirmar.addEventListener("click", async () => {
+        const actualizado = {
+            nombreProyecto: inputNombre.value,
+            descripcion:    inputDescripcion.value,
+            presupuesto:    inputPresupuesto.value,
+            fecha:          inputFecha.value,
+            estado:         inputEstado.value
+        };
 
-                await patchServicio(estadoActualizado, proyecto.id);
-                console.log("Estado actualizado a:", selectEstado.value);
+        await patchServicio(actualizado, proyecto.id);
 
-                p.textContent = `📋 ${proyecto.nombreProyecto} - Estado: ${selectEstado.value}`;
-                mensaje.textContent = "✅ Edición con éxito";
-                selectEstado.remove();
-                btnConfirmar.remove();
-                // Sweet Alert minimalista
+        p.textContent = `📋 ${actualizado.nombreProyecto} - Estado: ${actualizado.estado}`;
+
+        inputNombre.remove();
+        inputDescripcion.remove();
+        inputPresupuesto.remove();
+        inputFecha.remove();
+        inputEstado.remove();
+        btnConfirmar.remove();
+                // Sweet Alert
     Swal.fire({
         title: "¡Actualizado!",
         text: "El proyecto se actualizó con éxito",
