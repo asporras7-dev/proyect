@@ -1,0 +1,369 @@
+/* =============================================================
+   MUNICIPALIDAD DE ESCAZÚ - SISTEMA DE GESTIÓN MUNICIPAL
+   Admin Dashboard - Professional Management Interface
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #1e3a8a;
+    --color-secondary: #2563eb;
+    --color-accent: #3b82f6;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+
+    --bg-main: #f1f5f9;
+    --bg-white: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-white: #ffffff;
+
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+aside.sidebar {
+    grid-row: 1 / 4;
+    background: #0f172a;
+    /* Darker Slate for Admin */
+    color: var(--text-white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.sidebar-nav {
+    flex: 1;
+}
+
+.sidebar-nav h2 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+}
+
+.sidebar-nav a.active {
+    background: var(--color-primary);
+}
+
+#btnCerrarSesion {
+    margin-top: auto;
+    background: rgba(239, 68, 68, 0.1);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+#btnCerrarSesion:hover {
+    background: var(--color-danger);
+    color: white;
+}
+
+/* --- Content Wrapper --- */
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Top Header --- */
+header {
+    background: var(--bg-white);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    z-index: 10;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.admin-badge {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* --- Main content Area --- */
+main {
+    padding: 3rem;
+    max-width: 1400px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+section h2 {
+    display: none;
+    /* Already in header */
+}
+
+/* --- Articles / Cards --- */
+article {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+}
+
+article h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+/* --- Table Styles (Generic for reports container) --- */
+#reportes {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th {
+    text-align: left;
+    background: #f8fafc;
+    padding: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+/* --- Base Button System --- */
+button,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    gap: 0.5rem;
+    line-height: 1;
+}
+
+button:focus,
+.btn:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Primary Button (Main actions) */
+.btn-primary,
+#btn-editar {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover,
+#btn-editar:hover {
+    background: var(--color-secondary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active,
+#btn-editar:active {
+    transform: translateY(0);
+}
+
+/* Danger Button (Destructive actions) */
+.btn-danger,
+#btn-eliminar {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.btn-danger:hover,
+#btn-eliminar:hover {
+    background: var(--color-danger);
+    color: white;
+    border-color: var(--color-danger);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+/* Outline Button (Secondary actions) */
+.btn-outline,
+button.action-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-outline:hover,
+button.action-btn:hover {
+    background: #f8fafc;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Ghost Button (Sidebar/Logout actions) */
+.btn-ghost,
+#btnCerrarSesion {
+    background: transparent;
+    color: var(--text-muted);
+}
+
+/* Specific styling for the logout button to keep it distinct */
+#btnCerrarSesion {
+    margin-top: auto;
+    background: rgba(239, 68, 68, 0.05);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+#btnCerrarSesion:hover {
+    background: var(--color-danger);
+    color: white;
+    border-color: var(--color-danger);
+}
+
+/* --- Form Styles --- */
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+input,
+select {
+    padding: 0.75rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+}
+
+/* Button containers in forms */
+.form-group button {
+    width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 2rem 3rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    border-top: 1px solid var(--border-color);
+}
