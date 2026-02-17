@@ -10,7 +10,10 @@
 
 <body>
     <header>
-        <h1>Municipalidad de Escazú - Gestión Vial y Servicios Públicos</h1>
+        <div class="brand">
+            <img src="../img/Escudo_Cantón_Escazú_Costa_Rica.svg.png" width="70px" alt="Escudo de Escazú">
+            <h1>Municipalidad de Escazú - Gestión Vial y Servicios Públicos</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../pages/login.html">Login</a></li>
@@ -20,135 +23,154 @@
     </header>
 
     <main>
-        <section>
-            <h2>Bienvenido al Sistema de Gestión Municipal</h2>
-            <p>Plataforma digital para la gestión de servicios públicos y reportes ciudadanos de la Municipalidad de
-                Escazú.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Bienvenido al Sistema de Gestión Municipal</h2>
+                <p>Plataforma digital para la gestión de servicios públicos y reportes ciudadanos de la Municipalidad de
+                    Escazú.</p>
+            </div>
         </section>
 
-        <section>
-            <h2>Información Institucional</h2>
-            <article>
-                <h3>Sobre la Municipalidad de Escazú</h3>
-                <p>La Municipalidad de Escazú es una institución pública dedicada al desarrollo y bienestar de los
-                    ciudadanos del cantón de Escazú, San José, Costa Rica.</p>
-                <p>Nuestra misión es brindar servicios públicos de calidad, mantener la infraestructura vial en óptimas
-                    condiciones y garantizar el bienestar de nuestra comunidad.</p>
-            </article>
+        <!-- Bento Grid: Institutional Info -->
+        <section class="info-bento">
+            <div class="bento-header">
+                <h2>Información Institucional</h2>
+            </div>
+            <div class="bento-grid">
+                <article class="bento-item main-about">
+                    <div class="icon">🏛️</div>
+                    <h3>Sobre la Municipalidad</h3>
+                    <p>La Municipalidad de Escazú es una institución pública dedicada al desarrollo y bienestar de los
+                        ciudadanos del cantón de Escazú, San José, Costa Rica.</p>
+                    <p>Nuestra misión es brindar servicios públicos de calidad y garantizar el bienestar de nuestra
+                        comunidad.</p>
+                </article>
 
-            <article>
-                <h3>Visión</h3>
-                <p>Ser una municipalidad modelo en la gestión eficiente de servicios públicos, promoviendo el desarrollo
-                    sostenible y la participación ciudadana activa.</p>
-            </article>
+                <article class="bento-item vision">
+                    <div class="icon">👁️</div>
+                    <h3>Visión</h3>
+                    <p>Ser una municipalidad modelo en la gestión eficiente de servicios públicos y participación
+                        ciudadana.</p>
+                </article>
 
-            <article>
-                <h3>Valores</h3>
-                <ul>
-                    <li>Transparencia en la gestión pública</li>
-                    <li>Compromiso con la comunidad</li>
-                    <li>Eficiencia en la prestación de servicios</li>
-                    <li>Responsabilidad ambiental</li>
-                    <li>Innovación tecnológica</li>
-                </ul>
-            </article>
+                <article class="bento-item values">
+                    <div class="icon">🤝</div>
+                    <h3>Nuestros Valores</h3>
+                    <ul>
+                        <li>Transparencia en la gestión</li>
+                        <li>Compromiso comunitario</li>
+                        <li>Eficiencia en servicios</li>
+                        <li>Innovación tecnológica</li>
+                    </ul>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <h2>Acceso al Sistema</h2>
-            <p>Para utilizar nuestro sistema de gestión municipal, debe crear una cuenta o iniciar sesión si ya está
-                registrado.</p>
-
-            <div>
-                <h3>¿Ya tiene una cuenta?</h3>
-                <p>
+        <!-- Access Section -->
+        <section class="access-grid">
+            <div class="access-header">
+                <h2>Acceso al Sistema</h2>
+                <p>Inicie sesión o regístrese para gestionar sus trámites municipales.</p>
+            </div>
+            <div class="access-cards">
+                <div class="access-card login">
+                    <div class="card-text">
+                        <h3>¿Ya tiene cuenta?</h3>
+                        <p>Acceda a su panel personal.</p>
+                    </div>
                     <a href="login.html">
                         <button type="button">Iniciar Sesión</button>
                     </a>
-                </p>
-            </div>
+                </div>
 
-            <div>
-                <h3>¿Es nuevo en el sistema?</h3>
-                <p>
+                <div class="access-card register">
+                    <div class="card-text">
+                        <h3>¿Es nuevo aquí?</h3>
+                        <p>Cree su cuenta en segundos.</p>
+                    </div>
                     <a href="register.html">
                         <button type="button">Registrarse</button>
                     </a>
-                </p>
+                </div>
             </div>
         </section>
 
-        <section>
+        <!-- Process Flow: How to Report -->
+        <section class="report-process">
             <h2>Cómo Reportar Incidencias</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <h4>Registro</h4>
+                    <p>Cree una cuenta con sus datos.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <h4>Login</h4>
+                    <p>Acceda con sus credenciales.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <h4>Declarar</h4>
+                    <p>Seleccione y describa el problema.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <h4>Enviado</h4>
+                    <p>Reciba su código de seguimiento.</p>
+                </div>
+            </div>
+        </section>
 
-            <article>
-                <h3>Proceso de Reporte</h3>
-                <p>Reportar una incidencia en nuestro sistema es fácil y rápido. Siga estos pasos:</p>
+        <!-- Grid: Incident Types -->
+        <section class="incident-types">
+            <h2>Tipos de Incidencias</h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <span class="type-icon">🛣️</span>
+                    <h3>Baches</h3>
+                    <p>Deterioro en las vías públicas.</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-icon">🚥</span>
+                    <h3>Señalización</h3>
+                    <p>Señales dañadas o faltantes.</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-icon">💧</span>
+                    <h3>Alcantarillado</h3>
+                    <p>Drenaje o tapas de registro.</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-icon">♻️</span>
+                    <h3>Residuos</h3>
+                    <p>Servicio de recolección.</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-icon">💡</span>
+                    <h3>Alumbrado</h3>
+                    <p>Luminarias apagadas o dañadas.</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-icon">🌳</span>
+                    <h3>Zonas Verdes</h3>
+                    <p>Mantenimiento de parques.</p>
+                </div>
+            </div>
+        </section>
 
-                <ol>
-                    <li>
-                        <strong>Regístrese en el sistema:</strong> Si aún no tiene una cuenta, haga clic en el botón
-                        "Registrarse" y complete el formulario con sus datos personales.
-                    </li>
-                    <li>
-                        <strong>Inicie sesión:</strong> Acceda al sistema con su correo electrónico y contraseña.
-                    </li>
-                    <li>
-                        <strong>Seleccione el tipo de incidencia:</strong> Elija entre las categorías disponibles
-                        (baches, señalización, alcantarillado, recolección de residuos, alumbrado público, zonas
-                        verdes).
-                    </li>
-                    <li>
-                        <strong>Complete el formulario de reporte:</strong> Proporcione una descripción detallada del
-                        problema y la ubicación exacta.
-                    </li>
-                    <li>
-                        <strong>Envíe su reporte:</strong> Una vez enviado, recibirá un número de seguimiento para
-                        consultar el estado de su solicitud.
-                    </li>
-                    <li>
-                        <strong>Seguimiento:</strong> Podrá verificar el progreso de su reporte en cualquier momento
-                        desde su panel de usuario.
-                    </li>
-                </ol>
-            </article>
-
-            <article>
-                <h3>Tipos de Incidencias que Puede Reportar</h3>
-
-                <dl>
-                    <dt>Reportes de Baches</dt>
-                    <dd>Informe sobre baches, grietas o deterioro en las vías públicas del cantón.</dd>
-
-                    <dt>Señalización</dt>
-                    <dd>Reporte de señales de tránsito dañadas, faltantes o solicitud de nuevas señales.</dd>
-
-                    <dt>Alcantarillado</dt>
-                    <dd>Problemas en el sistema de alcantarillado, drenaje pluvial o tapas de registro.</dd>
-
-                    <dt>Recolección de Residuos</dt>
-                    <dd>Incidencias relacionadas con el servicio de recolección de basura y reciclaje.</dd>
-
-                    <dt>Alumbrado Público</dt>
-                    <dd>Reporte de luminarias dañadas, apagadas o solicitud de nuevo alumbrado.</dd>
-
-                    <dt>Mantenimiento de Zonas Verdes</dt>
-                    <dd>Solicitudes de mantenimiento de parques, jardines y áreas verdes municipales.</dd>
-                </dl>
-            </article>
-
-            <article>
-                <h3>Tiempo de Respuesta</h3>
-                <p>Nos comprometemos a revisar todos los reportes en un plazo máximo de 48 horas hábiles. Dependiendo de
-                    la complejidad y urgencia de la incidencia, el tiempo de resolución puede variar.</p>
-                <p>Recibirá notificaciones sobre el estado de su reporte a través del correo electrónico registrado.</p>
-            </article>
-
-            <article>
-                <h3>Contacto de Emergencia</h3>
-                <p>Para situaciones de emergencia que requieran atención inmediata, por favor comuníquese directamente
-                    con nuestra central telefónica al <strong>2208-7000</strong>.</p>
-            </article>
+        <!-- FAQ/Status Section (Combined) -->
+        <section class="status-contact">
+            <div class="response-time article-style">
+                <h3>⏱️ Tiempo de Respuesta</h3>
+                <p>Revisamos reportes en un máximo de <strong>48 horas hábiles</strong>. Le notificaremos por correo
+                    electrónico.</p>
+            </div>
+            <div class="emergency article-style">
+                <h3>🚨 Contacto Emergencia</h3>
+                <p>Para atención inmediata, llame a nuestra central: <strong>2208-7000</strong>.</p>
+            </div>
         </section>
     </main>
 
@@ -157,8 +179,6 @@
         <p>Dirección: Escazú, San José, Costa Rica</p>
         <p>Teléfono: 2208-7000</p>
     </footer>
-
-<script type="module" src="../js/app.js"></script>
 </body>
 
 </html>

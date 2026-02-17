@@ -46,17 +46,17 @@
   ],
   "reportes": [
     {
-      "tipo": "",
-      "descripcion": "Bache en la avenida central",
-      "ubicacion": "",
-      "estado": "en-proceso",
-      "id": "3fe9"
-    },
-    {
       "id": "b5e3",
       "tipo": "Problema",
       "descripcion": "Descripción",
       "ubicacion": "Tangamandapio",
+      "estado": "pendiente"
+    },
+    {
+      "id": "4e8d",
+      "tipo": "bache",
+      "descripcion": "jbvkjbfvbj",
+      "ubicacion": " bcjebfjkc",
       "estado": "pendiente"
     }
   ],

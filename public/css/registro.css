@@ -1,0 +1,214 @@
+/* =============================================================
+   MUNICIPALIDAD DE ESCAZÚ - SISTEMA DE GESTIÓN MUNICIPAL
+   Página de Registro - Diseño Moderno
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #1e3a8a;
+    --color-secondary: #2563eb;
+    --color-accent: #3b82f6;
+    --color-success: #10b981;
+    --color-success-hover: #059669;
+
+    --bg-main: #f8fafc;
+    --bg-white: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-white: #ffffff;
+
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    --radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header --- */
+header {
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+header h1 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background: rgba(37, 99, 235, 0.05);
+}
+
+/* --- Register Form Section --- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.register-section {
+    background: var(--bg-white);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.register-section h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.register-section>p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.register-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+#mensaje {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    min-height: 1.25rem;
+    text-align: center;
+}
+
+#btnRegistrarse {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-success);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+}
+
+#btnRegistrarse:hover {
+    background: var(--color-success-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.register-section p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.register-section p a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-section p a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--color-primary);
+    color: var(--text-white);
+    padding: 2.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}

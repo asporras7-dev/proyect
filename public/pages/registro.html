@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Municipalidad de Escazú</title>
+    <link rel="stylesheet" href="../css/registro.css">
 </head>
 
 <body>
     <header>
-        <h1>Municipalidad de Escazú</h1>
+        <div class="brand">
+            <img src="../img/Escudo_Cantón_Escazú_Costa_Rica.svg.png" width="70px" alt="Escudo de Escazú">
+            <h1>Municipalidad de Escazú</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="../pages/home.html">Inicio</a></li>
@@ -18,26 +22,37 @@
     </header>
 
     <main>
-        <section>
+        <section class="register-section">
             <h2>Registro de Ciudadano</h2>
             <p>Complete el formulario para crear su cuenta en el sistema de gestión municipal.</p>
-            <div>
-                <label for="nombreCompleto">Nombre Completo:</label>
-                <input id="nombreCompleto" type="text" placeholder="Ej: Juan Pérez González">
 
-                <label for="cedula">Cédula de Identidad:</label>
-                <input id="cedula" type="text" placeholder="Ej: 123456789">
-                <p><small>Ingrese 9 dígitos sin guiones ni espacios</small></p>
+            <div class="register-form">
+                <div class="form-group">
+                    <label for="nombreCompleto">Nombre Completo:</label>
+                    <input id="nombreCompleto" type="text" placeholder="Ej: Juan Pérez González">
+                </div>
 
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" class="email" placeholder="Ej: usuario@ejemplo.com">
+                <div class="form-group">
+                    <label for="cedula">Cédula de Identidad:</label>
+                    <input id="cedula" type="text" placeholder="Ej: 123456789">
+                    <small>Ingrese 9 dígitos sin guiones ni espacios</small>
+                </div>
 
-                <label for="numero">Número Telefónico:</label>
-                <input id="numero" type="text" placeholder="12345678">
-                <p><small>Ingrese su número sin guiones ni espacios</small></p>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" class="email" placeholder="Ej: usuario@ejemplo.com">
+                </div>
 
-                <label for="contrasenha">Contraseña:</label>
-                <input id="contrasenha" type="password" placeholder="******">
+                <div class="form-group">
+                    <label for="numero">Número Telefónico:</label>
+                    <input id="numero" type="text" placeholder="12345678">
+                    <small>Ingrese su número sin guiones ni espacios</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="contrasenha">Contraseña:</label>
+                    <input id="contrasenha" type="password" placeholder="******">
+                </div>
 
                 <p id="mensaje"></p>
                 <button id="btnRegistrarse" type="button">Registrarse</button>
