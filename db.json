@@ -1,84 +1,73 @@
 {
-<<<<<<< HEAD
-    "usuarios": [
-        {
-            "id": "1",
-            "nombreCompleto": "Juan Perez",
-            "correo": "juan@correo.com",
-            "contrasenha": "1234",
-            "rol": "admin"
-        },
-        {
-            "id": "a79e",
-            "nombreCompleto": "aaa",
-            "cedula": "11111111",
-            "correo": "kayrainold@gmail.com",
-            "numero": "5475745754",
-            "contrasenha": "aaaaaaaaaaaaaaa",
-            "rol": "ciudadano"
-        },
-        {
-            "id": "8994",
-            "nombreCompleto": "aaa",
-            "cedula": "11111111",
-            "correo": "kayrainold2@gmail.com",
-            "numero": "5475745754",
-            "contrasenha": "aaaaaaaaaaaaaaa",
-            "rol": "ciudadano"
-        },
-        {
-            "id": "0085",
-            "nombreCompleto": "aaa",
-            "cedula": "11111111",
-            "correo": "kayrainold3@gmail.com",
-            "numero": "5475745754",
-            "contrasenha": "aaaaaaaaaaaaaaa",
-            "rol": "ciudadano"
-        },
-        {
-            "id": "1893",
-            "nombreCompleto": "aaa",
-            "cedula": "11111111",
-            "correo": "kayrainold6@gmail.com",
-            "numero": "5475745754",
-            "contrasenha": "aaaaaaaaaaaaaaa",
-            "rol": "ciudadano"
-        }
-    ],
-    "reportes": [
-        {
-            "id": "3fe9",
-            "tipo": "",
-            "descripcion": "Bache en la avenida central",
-            "ubicacion": "",
-            "estado": "pendiente"
-        }
-    ]
-=======
+  "usuarios": [
+    {
+      "id": "1",
+      "nombreCompleto": "Juan Perez",
+      "correo": "juan@correo.com",
+      "contrasenha": "1234",
+      "rol": "admin"
+    },
+    {
+      "id": "a79e",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    },
+    {
+      "id": "8994",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold2@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    },
+    {
+      "id": "0085",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold3@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    },
+    {
+      "id": "1893",
+      "nombreCompleto": "aaa",
+      "cedula": "11111111",
+      "correo": "kayrainold6@gmail.com",
+      "numero": "5475745754",
+      "contrasenha": "aaaaaaaaaaaaaaa",
+      "rol": "ciudadano"
+    }
+  ],
+  "reportes": [
+    {
+      "tipo": "",
+      "descripcion": "Bache en la avenida central",
+      "ubicacion": "",
+      "estado": "en-proceso",
+      "id": "3fe9"
+    },
+    {
+      "id": "b5e3",
+      "tipo": "Problema",
+      "descripcion": "Descripción",
+      "ubicacion": "Tangamandapio",
+      "estado": "pendiente"
+    }
+  ],
   "viales": [
-    {
-      "id": "6f0d",
-      "nombreProyecto": "Civil",
-      "descripcion": "Municipal",
-      "presupuesto": "1234",
-      "fecha": "2026-02-03",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "6d76",
-      "nombreProyecto": "Civil",
-      "descripcion": "Municipal",
-      "presupuesto": "123432",
-      "fecha": "2026-02-04",
-      "estado": "Pendiente"
-    },
     {
       "id": "3901",
       "nombreProyecto": "Obras",
       "descripcion": "Municipal",
       "presupuesto": "21212",
       "fecha": "2026-02-10",
-      "estado": "Pendiente"
+      "estado": "En Proceso"
     },
     {
       "id": "bd20",
@@ -86,14 +75,6 @@
       "descripcion": "Parcial",
       "presupuesto": "444",
       "fecha": "2026-02-09",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "6719",
-      "nombreProyecto": "Civil",
-      "descripcion": "Municipal",
-      "presupuesto": "1234",
-      "fecha": "2026-02-10",
       "estado": "Pendiente"
     },
     {
@@ -422,9 +403,15 @@
       "id": "9f8f",
       "tipoServicio": "publico",
       "descripcion": "rural",
-      "responsable": "admintttt",
+      "responsable": "admi",
       "estado": "listo"
+    },
+    {
+      "id": "44ce",
+      "tipoServicio": "a",
+      "descripcion": "a",
+      "responsable": "a",
+      "estado": "a"
     }
   ]
->>>>>>> 4684280291a5b2997df98ebc90362d139787ad09
 }

@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // RUTA HOME
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'pages/dashboard-ciudadano.html'));
+    res.sendFile(path.join(__dirname, 'public', 'pages/home.html'));
 });
 
 const PORT = 3000;

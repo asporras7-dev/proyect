@@ -2,7 +2,7 @@ import { postServicio, getServicio, getServicioById, patchServicio, deleteServic
 
 // DOM
 const nombreProyecto = document.getElementById("nombreProyecto");
-const descripcion    = document.getElementById("decripcion");
+const descripcion    = document.getElementById("descripcion");
 const presupuesto    = document.getElementById("presupuesto");
 const fecha          = document.getElementById("fecha");
 const estado         = document.getElementById("estado");
