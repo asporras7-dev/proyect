@@ -3,14 +3,14 @@
 import { postGestion, getGestion, getGestionById, patchGestion, deleteGestion } from "../services/serviciosPublicos.js";
 
 // DOM
-const servicio      = document.getElementById("servicio");
-const descripcion   = document.getElementById("descripcion");
-const responsable   = document.getElementById("responsable");
-const estado        = document.getElementById("estado");
-const guardar       = document.getElementById("guardar");
-const mensaje       = document.getElementById("mensaje");
-const btnMostrar    = document.getElementById("Mostrar");
-const divServicios  = document.getElementById("divServicios");
+const servicio = document.getElementById("servicio");
+const descripcion = document.getElementById("descripcion");
+const responsable = document.getElementById("responsable");
+const estado = document.getElementById("estado");
+const guardar = document.getElementById("guardar");
+const mensaje = document.getElementById("mensaje");
+const btnMostrar = document.getElementById("Mostrar");
+const divServicios = document.getElementById("divServicios");
 
 
 // POST - Registrar servicio
@@ -28,9 +28,9 @@ guardar.addEventListener("click", async function () {
 
     const servicioDatos = {
         tipoServicio: servicio.value,
-        descripcion:  descripcion.value,
-        responsable:  responsable.value,
-        estado:       estado.value
+        descripcion: descripcion.value,
+        responsable: responsable.value,
+        estado: estado.value
     };
 
     const resultado = await postGestion(servicioDatos);
@@ -49,22 +49,22 @@ guardar.addEventListener("click", async function () {
 // GET - Mostrar todos los servicios
 btnMostrar.addEventListener("click", async function () {
 
-   divServicios.textContent = "";
+    divServicios.textContent = "";
 
     const resultado = await getGestion();
 
     resultado.forEach((serv) => {
 
         const div = document.createElement("div");
-        const p   = document.createElement("p");
+        const p = document.createElement("p");
 
-        const btnDetalle  = document.createElement("button");
-        const btnEditar   = document.createElement("button");
+        const btnDetalle = document.createElement("button");
+        const btnEditar = document.createElement("button");
         const btnEliminar = document.createElement("button");
 
-        p.textContent           = `🔧 ${serv.tipoServicio} - ${serv.estado}`;
-        btnDetalle.textContent  = "Ver detalle";
-        btnEditar.textContent   = "Editar";
+        p.textContent = `🔧 ${serv.tipoServicio} - ${serv.estado}`;
+        btnDetalle.textContent = "Ver detalle";
+        btnEditar.textContent = "Editar";
         btnEliminar.textContent = "Eliminar";
 
         div.appendChild(p);
@@ -75,87 +75,117 @@ btnMostrar.addEventListener("click", async function () {
 
 
         // GET por ID - Ver detalle
-    // GET por ID - Ver detalle
-btnDetalle.addEventListener("click", async () => {
-    const detalle = await getGestionById(serv.id);
+        // GET por ID - Ver detalle
+        btnDetalle.addEventListener("click", async () => {
+            const detalle = await getGestionById(serv.id);
 
-    // Limpiar detalles previos
-    const detalleAnterior = div.querySelector(".detalle-info");
-    if (detalleAnterior) detalleAnterior.remove();
+            // Limpiar detalles previos
+            const detalleAnterior = div.querySelector(".detalle-info");
+            if (detalleAnterior) detalleAnterior.remove();
 
-    const divDetalle = document.createElement("div");
-    divDetalle.className = "detalle-info";
+            const divDetalle = document.createElement("div");
+            divDetalle.className = "detalle-info";
 
-    divDetalle.innerHTML = `
+            divDetalle.innerHTML = `
         <p>🔧 Tipo: ${detalle.tipoServicio}</p>
         <p>📝 Descripción: ${detalle.descripcion}</p>
         <p>👤 Responsable: ${detalle.responsable}</p>
         <p>🔄 Estado: ${detalle.estado}</p>
     `;
 
-    div.appendChild(divDetalle);
-});
+            div.appendChild(divDetalle);
+        });
 
 
-        // PATCH - Editar responsable
-        btnEditar.addEventListener("click", async () => {
-            const inputResponsable = document.createElement("input");
-            const btnConfirmar     = document.createElement("button");
-            
-            inputResponsable.value       = serv.responsable;
-            btnConfirmar.textContent     = "Confirmar";
+        
+      // PATCH - Editar todos los campos
+btnEditar.addEventListener("click", async () => {
 
-            div.appendChild(inputResponsable);
-            div.appendChild(btnConfirmar);
+    // Limpiar detalles si existen
+    const detalleAnterior = div.querySelector(".detalle-info");
+    if (detalleAnterior) detalleAnterior.remove();
 
-            btnConfirmar.addEventListener("click", async () => {
-                const actualizado = {
-                    responsable: inputResponsable.value
-                };
+    const inputTipo         = document.createElement("input");
+    const inputDescripcion  = document.createElement("input");
+    const inputResponsable  = document.createElement("input");
+    const inputEstado       = document.createElement("input");
+    const btnConfirmar      = document.createElement("button");
 
-                await patchGestion(actualizado, serv.id);
+    inputTipo.value         = serv.tipoServicio;
+    inputDescripcion.value  = serv.descripcion;
+    inputResponsable.value  = serv.responsable;
+    inputEstado.value       = serv.estado;
+    btnConfirmar.textContent = "Confirmar";
 
-                inputResponsable.remove();
-                btnConfirmar.remove();
+    div.appendChild(document.createElement("br"));
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputTipo);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputDescripcion);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputResponsable);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputEstado);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(btnConfirmar);
+
+    btnConfirmar.addEventListener("click", async () => {
+        const actualizado = {
+            tipoServicio: inputTipo.value,
+            descripcion:  inputDescripcion.value,
+            responsable:  inputResponsable.value,
+            estado:       inputEstado.value
+        };
+
+        await patchGestion(actualizado, serv.id);
+
+        p.textContent = `🔧 ${actualizado.tipoServicio} - ${actualizado.estado}`;
+
+        inputTipo.remove();
+        inputDescripcion.remove();
+        inputResponsable.remove();
+        inputEstado.remove();
+        btnConfirmar.remove();
+
                 Swal.fire({
-        title: "¡Actualizado!",
-        text: "EL servicio se actualizó con éxito",
-        icon: "success",
-        timer: 2000,
-        showConfirmButton: false
-            });
+                    title: "¡Actualizado!",
+                    text: "EL servicio se actualizó con éxito",
+                    icon: "success",
+                    timer: 2000,
+                    showConfirmButton: false
+                });
             });
         });
 
 
         // DELETE - Eliminar servicio
-       btnEliminar.addEventListener("click", async () => {
-    
-    Swal.fire({
-        title: "¿Estás seguro?",
-        text: `Se eliminará el servicio "${serv.tipoServicio}"`,
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Sí, eliminar",
-        cancelButtonText: "Cancelar",
-        confirmButtonColor: "#d33",
-        cancelButtonColor: "#3085d6"
-    }).then(async (result) => {
-        if (result.isConfirmed) {
-            await deleteGestion(serv.id);
-            div.remove();
-            
+        btnEliminar.addEventListener("click", async () => {
+
             Swal.fire({
-                title: "¡Eliminado!",
-                text: "El servicio ha sido eliminado con éxito",
-                icon: "success",
-                confirmButtonText: "Aceptar"
+                title: "¿Estás seguro?",
+                text: `Se eliminará el servicio "${serv.tipoServicio}"`,
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, eliminar",
+                cancelButtonText: "Cancelar",
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6"
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    await deleteGestion(serv.id);
+                    div.remove();
+
+                    Swal.fire({
+                        title: "¡Eliminado!",
+                        text: "El servicio ha sido eliminado con éxito",
+                        icon: "success",
+                        confirmButtonText: "Aceptar"
+                    });
+                }
             });
-        }
-    });
-});
-    
-        
+        });
+
+
 
     });
 });

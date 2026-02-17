@@ -56,7 +56,7 @@
   "viales": [
     {
       "id": "3901",
-      "nombreProyecto": "Obras",
+      "nombreProyecto": "a",
       "descripcion": "Municipal",
       "presupuesto": "21212",
       "fecha": "2026-02-10",
@@ -501,12 +501,68 @@
       "presupuesto": "1111",
       "fecha": "2026-02-05",
       "estado": "Pendiente"
+    },
+    {
+      "id": "3742",
+      "nombreProyecto": "Civil ciudad",
+      "descripcion": "ciudades",
+      "presupuesto": "10",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "2f33",
+      "nombreProyecto": "obra de constru",
+      "descripcion": "constru",
+      "presupuesto": "11",
+      "fecha": "2026-02-05",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "d033",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-11",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "0c7c",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "1bab",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "079c",
+      "nombreProyecto": "obras ciudad",
+      "descripcion": "muni",
+      "presupuesto": "1111",
+      "fecha": "2026-02-02",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "12d2",
+      "nombreProyecto": "obras ciudad",
+      "descripcion": "muni",
+      "presupuesto": "1111",
+      "fecha": "2026-02-02",
+      "estado": "Pendiente"
     }
   ],
   "publicos": [
     {
       "id": "7da0",
-      "tipoServicio": "publico",
+      "tipoServicio": "aa",
       "descripcion": "rural",
       "responsable": "admin",
       "estado": "Pendiente"
@@ -514,7 +570,7 @@
     {
       "id": "350a",
       "tipoServicio": "publico",
-      "descripcion": "rural",
+      "descripcion": "obra rural",
       "responsable": "admin",
       "estado": "Pendiente"
     },
@@ -676,6 +732,34 @@
       "id": "4bd9",
       "tipoServicio": "publico",
       "descripcion": "rural",
+      "responsable": "admin",
+      "estado": "listo"
+    },
+    {
+      "id": "ca7f",
+      "tipoServicio": "publico",
+      "descripcion": "dsdsds",
+      "responsable": "admin",
+      "estado": "Listo"
+    },
+    {
+      "id": "d2ea",
+      "tipoServicio": "cosntruccion",
+      "descripcion": "vial",
+      "responsable": "tecnico",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "5eec",
+      "tipoServicio": "servicio de construccion",
+      "descripcion": "vial",
+      "responsable": "tec",
+      "estado": "listo"
+    },
+    {
+      "id": "0add",
+      "tipoServicio": "dsdsd",
+      "descripcion": "dsdsds",
       "responsable": "admin",
       "estado": "listo"
     }
