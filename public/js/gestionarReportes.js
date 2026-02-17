@@ -18,6 +18,7 @@ async function renderizarReportes() {
         div.appendChild(p);
         const btn = document.createElement("button");
         btn.textContent = "Mostrar detalles";
+        btn.classList.add("btn-outline");
         div.appendChild(btn);
         const p2 = document.createElement("p");
         p2.textContent = element.id + " " + element.tipo + " " + element.descripcion + " " + element.ubicacion + " " + element.estado;

@@ -5,88 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Administrativo - Municipalidad de Escazú</title>
+    <link rel="stylesheet" href="../css/dashboard-admin.css">
 </head>
 
 <body>
-    <header>
-        <h1>Panel Administrativo</h1>
-        <nav>
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../img/Escudo_Cantón_Escazú_Costa_Rica.svg.png" width="50px" alt="Escudo de Escazú">
+            <h1>Escazú Digital <span class="admin-badge">Admin</span></h1>
+        </div>
+        <nav class="sidebar-nav">
+            <h2>Navegación</h2>
             <ul>
-                <li><button id="btnCerrarSesion">Cerrar Sesión</button></li>
+                <li><a href="../pages/dashboard-admin.html" class="active">Gestión de Reportes</a></li>
+                <li><a href="../pages/Proyectos.html">Gestión de Proyectos</a></li>
+                <li><a href="../pages/serviciosPublicos.html">Gestión de Servicios</a></li>
             </ul>
         </nav>
-    </header>
-
-    <aside>
-        <h2>Menú de Navegación</h2>
-        <nav>
-            <ul>
-                <li><a href="#gestion-reportes">Gestión de Reportes</a></li>
-                <li><a href="#gestion-proyectos">Gestión de Proyectos Viales</a></li>
-                <li><a href="#gestion-servicios">Gestión de Servicios Públicos</a></li>
-            </ul>
-        </nav>
+        <button id="btnCerrarSesion">Cerrar Sesión</button>
     </aside>
 
-    <main>
-        <!-- CRUD 1: Gestión de Reportes -->
-        <section id="gestion-reportes">
-            <h2>Gestión de Reportes</h2>
+    <div class="dashboard-wrapper">
+        <header>
+            <h2>Panel Administrativo</h2>
+            <div class="user-info">
+                <span>Sesión: Administrador</span>
+            </div>
+        </header>
 
-            <article>
-                <h3>Lista de Reportes</h3>
-                <div id="reportes">
-                    
-                </div>
-            </article>
-
-            <article>
-                <h3>Actualizar Estado de Reporte</h3>
-                <form method="POST" action="/reportes/actualizar">
-                    <input type="hidden" name="_method" value="PUT">
-
-                    <div>
-                        <label for="reporte-id">ID del Reporte:</label>
-                        <input type=text" id="reporte-id" name="reporte-id" required>
+        <main>
+            <!-- CRUD 1: Gestión de Reportes -->
+            <section id="gestion-reportes">
+                <article>
+                    <h3>Lista de Reportes</h3>
+                    <div id="reportes">
+                        <!-- La tabla se generará dinámicamente -->
+                        <p class="text-muted">Cargando reportes...</p>
                     </div>
+                </article>
 
-                    <div>
-                        <label for="estado-reporte">Nuevo Estado:</label>
-                        <select id="estado-reporte" name="estado-reporte" required>
-                            <option value="">Seleccione un estado</option>
-                            <option value="pendiente">Pendiente</option>
-                            <option value="en-proceso">En Proceso</option>
-                            <option value="completado">Completado</option>
-                            <option value="rechazado">Rechazado</option>
-                        </select>
-                    </div>
+                <article>
+                    <h3>Actualizar Estado de Reporte</h3>
+                    <form id="form-actualizar">
+                        <div class="form-group">
+                            <label for="reporte-id">ID del Reporte:</label>
+                            <input type="text" id="reporte-id" name="reporte-id" required placeholder="Ej: 3fe9">
+                        </div>
 
-                    <div>
-                        <button id="btn-editar">Actualizar Estado</button>
-                    </div>
-                </form>
-            </article>
-            <article>
-                <h3>Eliminar Reporte</h3>
-                <div>
-                    <input type="hidden" name="_method" value="PUT">
+                        <div class="form-group">
+                            <label for="estado-reporte">Nuevo Estado:</label>
+                            <select id="estado-reporte" name="estado-reporte" required>
+                                <option value="">Seleccione un estado</option>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="en-proceso">En Proceso</option>
+                                <option value="completado">Completado</option>
+                                <option value="rechazado">Rechazado</option>
+                            </select>
+                        </div>
 
-                    <div>
+                        <div class="form-group">
+                            <button id="btn-editar" type="button">Actualizar Estado</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Eliminar Reporte</h3>
+                    <div class="form-group">
                         <label for="reporte-id-delete">ID del Reporte:</label>
-                        <input type=text" id="reporte-id-delete" name="reporte-id-delete" required>
+                        <input type="text" id="reporte-id-delete" name="reporte-id-delete" required
+                            placeholder="Ej: 3fe9">
                     </div>
-
-                    <div>
-                        <button id="btn-eliminar">Eliminar Reporte</button>
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <button id="btn-eliminar" type="button">Eliminar Reporte</button>
                     </div>
-                </div>
-            </article>
-        </section>
-    </main>
+                </article>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2026 Municipalidad de Escazú. Todos los derechos reservados.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Municipalidad de Escazú. Todos los derechos reservados.</p>
+        </footer>
+    </div>
     <script type="module" src="../js/gestionarReportes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../js/dashboard-admin.js"></script>

@@ -5,7 +5,11 @@ const descripcion = document.getElementById("descripcion");
 const ubicacion = document.getElementById("ubicacion");
 const btnReportar = document.getElementById("btnReportar");
 const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+const usuarioActivo = document.getElementById("usuarioActivo");
 
+
+
+usuarioActivo.textContent = JSON.parse(localStorage.getItem("usuario")).nombreCompleto;
 
 btnCerrarSesion.addEventListener("click", () => {
     localStorage.removeItem("usuario");
