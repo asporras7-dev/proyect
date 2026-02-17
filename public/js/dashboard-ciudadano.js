@@ -23,6 +23,15 @@ btnReportar.addEventListener("click", async function (e) {
     e.preventDefault();
     const data = await reportarProblemas(problema)
     console.log(data);
-    
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Reporte enviado",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    tipo.value = "";
+    descripcion.value = "";
+    ubicacion.value = "";
 });
 
