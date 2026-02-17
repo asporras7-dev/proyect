@@ -31,7 +31,12 @@ guardar.addEventListener("click", async function () {
     const resultado = await postGestion(servicioDatos);
 
     if (resultado && resultado.id) {
-        mensaje.textContent = "✅ Servicio registrado con éxito";
+        Swal.fire({
+            title: "¡Éxito!",
+            text: "Proyecto registrado con éxito",
+            icon: "success",
+            confirmButtonText: "Aceptar"
+        });
     }
 });
 
@@ -65,15 +70,26 @@ btnMostrar.addEventListener("click", async function () {
 
 
         // GET por ID - Ver detalle
-        btnDetalle.addEventListener("click", async () => {
-            const detalle = await getGestionById(serv.id);
-            alert(
-                `🔧 Tipo: ${detalle.tipoServicio}\n` +
-                `📝 Descripción: ${detalle.descripcion}\n` +
-                `👤 Responsable: ${detalle.responsable}\n` +
-                `🔄 Estado: ${detalle.estado}`
-            );
-        });
+    // GET por ID - Ver detalle
+btnDetalle.addEventListener("click", async () => {
+    const detalle = await getGestionById(serv.id);
+
+    // Limpiar detalles previos
+    const detalleAnterior = div.querySelector(".detalle-info");
+    if (detalleAnterior) detalleAnterior.remove();
+
+    const divDetalle = document.createElement("div");
+    divDetalle.className = "detalle-info";
+
+    divDetalle.innerHTML = `
+        <p>🔧 Tipo: ${detalle.tipoServicio}</p>
+        <p>📝 Descripción: ${detalle.descripcion}</p>
+        <p>👤 Responsable: ${detalle.responsable}</p>
+        <p>🔄 Estado: ${detalle.estado}</p>
+    `;
+
+    div.appendChild(divDetalle);
+});
 
 
         // PATCH - Editar responsable
@@ -96,19 +112,45 @@ btnMostrar.addEventListener("click", async function () {
 
                 inputResponsable.remove();
                 btnConfirmar.remove();
+                Swal.fire({
+        title: "¡Actualizado!",
+        text: "EL servicio se actualizó con éxito",
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false
+            });
             });
         });
 
 
         // DELETE - Eliminar servicio
-        btnEliminar.addEventListener("click", async () => {
-            const confirmar = confirm(`¿Eliminar "${serv.tipoServicio}"?`);
-
-            if (confirmar) {
-                await deleteGestion(serv.id);
-                div.remove();
-            }
-        });
+       btnEliminar.addEventListener("click", async () => {
+    
+    Swal.fire({
+        title: "¿Estás seguro?",
+        text: `Se eliminará el servicio "${serv.tipoServicio}"`,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Sí, eliminar",
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6"
+    }).then(async (result) => {
+        if (result.isConfirmed) {
+            await deleteGestion(serv.id);
+            div.remove();
+            
+            Swal.fire({
+                title: "¡Eliminado!",
+                text: "El servicio ha sido eliminado con éxito",
+                icon: "success",
+                confirmButtonText: "Aceptar"
+            });
+        }
+    });
+});
+    
+        
 
     });
 });
