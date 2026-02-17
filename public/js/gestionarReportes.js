@@ -65,8 +65,8 @@ async function renderizarReportes() {
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire({
-                title: "Reporte editado",
-                confirmButtonText: "Ok"
+                    title: "Reporte editado",
+                    confirmButtonText: "Ok"
                 }).then((result) => {
                     if (result.isConfirmed) {
                         EditReporte(idReporte.value)
@@ -77,27 +77,51 @@ async function renderizarReportes() {
             }
         })
     })
-    btnEliminar.addEventListener("click", function (e) {
+    btnEliminar.addEventListener("click", async function (e) {
         e.preventDefault();
-        Swal.fire({
-            title: "Quieres eliminar el reporte?",
-            showCancelButton: true,
-            confirmButtonText: "Si",
-            cancelButtonText: "No"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire({
-                title: "Reporte eliminado",
-                confirmButtonText: "Ok"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        EliminarReporte(idReporteDelete.value)
-                        renderizarReportes();
-                        window.location.reload();
-                    }
-                })
+        data.forEach(element => {
+            if (element.id == idReporteDelete.value) {
+                if (element.estado !== "rechazado") {
+                    Swal.fire({
+                        icon: "error",
+                        title: "No se puede eliminar el reporte",
+                        text: "El reporte no se puede eliminar porque no esta rechazado",
+                        confirmButtonText: "Ok"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            renderizarReportes();
+                            window.location.reload();
+                        }
+                    })
+                    console.log("entra en el NO");
+                    return;
+                }
+               // console.log("sale del no");
+                else {
+                    console.log("Entra en el si");
+                    Swal.fire({
+                        title: "Quieres eliminar el reporte?",
+                        showCancelButton: true,
+                        confirmButtonText: "Si",
+                        cancelButtonText: "No"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            Swal.fire({
+                                title: "Reporte eliminado",
+                                confirmButtonText: "Ok"
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    EliminarReporte(idReporteDelete.value)
+                                    renderizarReportes();
+                                    window.location.reload();
+                                }
+                            })
+                        }
+                    })
+                }
             }
-        })
+        }
+        )
     })
 }
 async function EditReporte(id) {
@@ -127,9 +151,9 @@ btnEditar.addEventListener("click", function (e) {
     EditReporte(idReporte.value)
 });
 
-btnEliminar.addEventListener("click", function (e) {
-    e.preventDefault();
-    EliminarReporte(idReporteDelete.value)
-});
+// btnEliminar.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     EliminarReporte(idReporteDelete.value)
+// });
 
 renderizarReportes();
