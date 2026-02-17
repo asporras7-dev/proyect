@@ -29,17 +29,30 @@ async function renderizarReportes() {
     });
     btnEditar.addEventListener("click", function (e) {
         e.preventDefault();
-        EditReporte(idReporte.value)
-        renderizarReportes();
-        window.location.reload();
-    });
-
+        Swal.fire({
+            title: "Reporte editado",
+            confirmButtonText: "Ok"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                EditReporte(idReporte.value)
+                renderizarReportes();
+                window.location.reload();
+            }
+        })
+    })
     btnEliminar.addEventListener("click", function (e) {
         e.preventDefault();
-        EliminarReporte(idReporteDelete.value)
-        renderizarReportes();
-        window.location.reload();
-    });
+        Swal.fire({
+            title: "Reporte eliminado",
+            confirmButtonText: "Ok"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                EliminarReporte(idReporteDelete.value)
+                renderizarReportes();
+                window.location.reload();
+            }
+        })
+    })
 }
 async function EditReporte(id) {
     const dataReporte = await getReportes();

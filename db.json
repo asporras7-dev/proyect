@@ -58,6 +58,27 @@
       "descripcion": "Descripción",
       "ubicacion": "Tangamandapio",
       "estado": "pendiente"
+    },
+    {
+      "id": "ea57",
+      "tipo": "Problema",
+      "descripcion": "a",
+      "ubicacion": "Tangamandapio",
+      "estado": "pendiente"
+    },
+    {
+      "id": "7a7f",
+      "tipo": "Problema",
+      "descripcion": "a",
+      "ubicacion": "Tangamandapio",
+      "estado": "pendiente"
+    },
+    {
+      "id": "4dd1",
+      "tipo": "Problema",
+      "descripcion": "a",
+      "ubicacion": "Tangamandapio",
+      "estado": "pendiente"
     }
   ],
   "viales": [
