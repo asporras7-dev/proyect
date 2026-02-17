@@ -166,12 +166,6 @@ main {
     max-width: 1400px;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
 section h2 {
     display: none;
     /* Already in header */
