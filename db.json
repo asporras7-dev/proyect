@@ -1,69 +1,56 @@
 {
-  "usuarios": [
-    {
-      "id": "1",
-      "nombreCompleto": "Juan Perez",
-      "correo": "juan@correo.com",
-      "contrasenha": "1234",
-      "rol": "admin"
-    },
-    {
-      "id": "a79e",
-      "nombreCompleto": "aaa",
-      "cedula": "11111111",
-      "correo": "kayrainold@gmail.com",
-      "numero": "5475745754",
-      "contrasenha": "aaaaaaaaaaaaaaa",
-      "rol": "ciudadano"
-    },
-    {
-      "id": "8994",
-      "nombreCompleto": "aaa",
-      "cedula": "11111111",
-      "correo": "kayrainold2@gmail.com",
-      "numero": "5475745754",
-      "contrasenha": "aaaaaaaaaaaaaaa",
-      "rol": "ciudadano"
-    },
-    {
-      "id": "0085",
-      "nombreCompleto": "aaa",
-      "cedula": "11111111",
-      "correo": "kayrainold3@gmail.com",
-      "numero": "5475745754",
-      "contrasenha": "aaaaaaaaaaaaaaa",
-      "rol": "ciudadano"
-    },
-    {
-      "id": "1893",
-      "nombreCompleto": "aaa",
-      "cedula": "11111111",
-      "correo": "kayrainold6@gmail.com",
-      "numero": "5475745754",
-      "contrasenha": "aaaaaaaaaaaaaaa",
-      "rol": "ciudadano"
-    }
-  ],
-  "reportes": [
-    {
-      "id": "3fe9",
-      "tipo": "",
-      "descripcion": "Bache en la avenida central",
-      "ubicacion": "",
-      "estado": "pendiente"
-    },
-    {
-      "id": "ee11",
-      "tipo": "Problema",
-      "descripcion": "",
-      "ubicacion": "t",
-      "estado": "pendiente"
-    },
-    {
-      "id": "88c2",
-      "tipo": "Problema",
-      "descripcion": "...",
-      "ubicacion": "Tangamandapio"
-    }
-  ]
+    "usuarios": [
+        {
+            "id": "1",
+            "nombreCompleto": "Juan Perez",
+            "correo": "juan@correo.com",
+            "contrasenha": "1234",
+            "rol": "admin"
+        },
+        {
+            "id": "a79e",
+            "nombreCompleto": "aaa",
+            "cedula": "11111111",
+            "correo": "kayrainold@gmail.com",
+            "numero": "5475745754",
+            "contrasenha": "aaaaaaaaaaaaaaa",
+            "rol": "ciudadano"
+        },
+        {
+            "id": "8994",
+            "nombreCompleto": "aaa",
+            "cedula": "11111111",
+            "correo": "kayrainold2@gmail.com",
+            "numero": "5475745754",
+            "contrasenha": "aaaaaaaaaaaaaaa",
+            "rol": "ciudadano"
+        },
+        {
+            "id": "0085",
+            "nombreCompleto": "aaa",
+            "cedula": "11111111",
+            "correo": "kayrainold3@gmail.com",
+            "numero": "5475745754",
+            "contrasenha": "aaaaaaaaaaaaaaa",
+            "rol": "ciudadano"
+        },
+        {
+            "id": "1893",
+            "nombreCompleto": "aaa",
+            "cedula": "11111111",
+            "correo": "kayrainold6@gmail.com",
+            "numero": "5475745754",
+            "contrasenha": "aaaaaaaaaaaaaaa",
+            "rol": "ciudadano"
+        }
+    ],
+    "reportes": [
+        {
+            "id": "3fe9",
+            "tipo": "",
+            "descripcion": "Bache en la avenida central",
+            "ubicacion": "",
+            "estado": "pendiente"
+        }
+    ]
 }

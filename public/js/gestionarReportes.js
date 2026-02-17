@@ -1,13 +1,16 @@
 import { getReportes, editReportes } from "../services/serviciosReportes.js";
-import {deleteReportes} from "../services/serviciosReportes.js";
+import { deleteReportes } from "../services/serviciosReportes.js";
 const div = document.getElementById("reportes");
 const idReporte = document.getElementById("reporte-id");
 const estadoReporte = document.getElementById("estado-reporte");
 const btnEditar = document.getElementById("btn-editar");
 const idReporteDelete = document.getElementById("reporte-id-delete");
 const btnEliminar = document.getElementById("btn-eliminar")
-async function renderizarReportes(){
+
+async function renderizarReportes() {
+    console.log("entra");
     const data = await getReportes();
+    div.textContent = "";
     data.forEach(element => {
         console.log(element);
         const p = document.createElement("p");
@@ -20,22 +23,34 @@ async function renderizarReportes(){
         p2.textContent = element.id + " " + element.tipo + " " + element.descripcion + " " + element.ubicacion + " " + element.estado;
         div.appendChild(p2);
         p2.style.display = "none";
-        btn.addEventListener("click", function(){
+        btn.addEventListener("click", function () {
             p2.style.display = "block";
         });
     });
-}
+    btnEditar.addEventListener("click", function (e) {
+        e.preventDefault();
+        EditReporte(idReporte.value)
+        renderizarReportes();
+        window.location.reload();
+    });
 
-async function EditReporte(id){
+    btnEliminar.addEventListener("click", function (e) {
+        e.preventDefault();
+        EliminarReporte(idReporteDelete.value)
+        renderizarReportes();
+        window.location.reload();
+    });
+}
+async function EditReporte(id) {
     const dataReporte = await getReportes();
     let reporte = {};
     dataReporte.forEach(element => {
-        if(element.id == id){
+        if (element.id == id) {
             reporte = {
                 tipo: element.tipo,
                 descripcion: element.descripcion,
                 ubicacion: element.ubicacion,
-                estado: estadoReporte.value 
+                estado: estadoReporte.value
             };
         }
     });
@@ -43,17 +58,17 @@ async function EditReporte(id){
     return data;
 }
 
-async function EliminarReporte(id){
+async function EliminarReporte(id) {
     const data = await deleteReportes(id)
     return data;
 }
 
-btnEditar.addEventListener("click", function(e){
+btnEditar.addEventListener("click", function (e) {
     e.preventDefault();
     EditReporte(idReporte.value)
 });
 
-btnEliminar.addEventListener("click", function(e){
+btnEliminar.addEventListener("click", function (e) {
     e.preventDefault();
     EliminarReporte(idReporteDelete.value)
 });

@@ -17,10 +17,12 @@ btnReportar.addEventListener("click", async function (e) {
     const problema = {
         tipo: tipo.value,
         descripcion: descripcion.value,
-        ubicacion: ubicacion.value
+        ubicacion: ubicacion.value,
+        estado: "pendiente"
     }
     e.preventDefault();
     const data = await reportarProblemas(problema)
     console.log(data);
+    
 });
 
