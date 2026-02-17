@@ -60,11 +60,11 @@
       "estado": "pendiente"
     },
     {
-      "id": "ea57",
       "tipo": "Problema",
       "descripcion": "a",
       "ubicacion": "Tangamandapio",
-      "estado": "pendiente"
+      "estado": "pendiente",
+      "id": "ea57"
     },
     {
       "id": "7a7f",
@@ -72,13 +72,6 @@
       "descripcion": "a",
       "ubicacion": "Tangamandapio",
       "estado": "pendiente"
-    },
-    {
-      "tipo": "Problema",
-      "descripcion": "a",
-      "ubicacion": "Tangamandapio",
-      "estado": "pendiente",
-      "id": "4dd1"
     }
   ],
   "viales": [

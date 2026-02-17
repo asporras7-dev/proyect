@@ -58,26 +58,44 @@ async function renderizarReportes() {
     btnEditar.addEventListener("click", function (e) {
         e.preventDefault();
         Swal.fire({
-            title: "Reporte editado",
-            confirmButtonText: "Ok"
+            title: "Quieres editar el reporte?",
+            showCancelButton: true,
+            confirmButtonText: "Si",
+            cancelButtonText: "No"
         }).then((result) => {
             if (result.isConfirmed) {
-                EditReporte(idReporte.value)
-                renderizarReportes();
-                window.location.reload();
+                Swal.fire({
+                title: "Reporte editado",
+                confirmButtonText: "Ok"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        EditReporte(idReporte.value)
+                        renderizarReportes();
+                        window.location.reload();
+                    }
+                })
             }
         })
     })
     btnEliminar.addEventListener("click", function (e) {
         e.preventDefault();
         Swal.fire({
-            title: "Reporte eliminado",
-            confirmButtonText: "Ok"
+            title: "Quieres eliminar el reporte?",
+            showCancelButton: true,
+            confirmButtonText: "Si",
+            cancelButtonText: "No"
         }).then((result) => {
             if (result.isConfirmed) {
-                EliminarReporte(idReporteDelete.value)
-                renderizarReportes();
-                window.location.reload();
+                Swal.fire({
+                title: "Reporte eliminado",
+                confirmButtonText: "Ok"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        EliminarReporte(idReporteDelete.value)
+                        renderizarReportes();
+                        window.location.reload();
+                    }
+                })
             }
         })
     })
