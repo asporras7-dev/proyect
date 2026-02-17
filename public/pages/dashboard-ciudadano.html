@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panel de Ciudadano - Municipalidad de Escazú</title>
 </head>
 
 <body>
@@ -16,15 +16,28 @@
             </ul>
         </nav>
     </header>
-    <div id="Reporte problemas">
-        <label for="tipo">Tipo de Problema</label>
-        <input type="text" id="tipo">
-        <label for="descripcion">Descripción del problema</label>
-        <input type="text" id="descripcion">
-        <label for="ubicacion">Ubicación</label>
-        <input type="text" id="ubicacion">
-        <button id="btnReportar">Reportar problema</button>
-    </div>
+    <main>
+        <section id="Reporte problemas">
+            <h2>Reportar un Problema</h2>
+            <p>Utilice este formulario para informar sobre incidencias en su comunidad.</p>
+            <div>
+                <label for="tipo">Tipo de Problema</label>
+                <input type="text" id="tipo" placeholder="Ej: Bache, Luz apagada">
+
+                <label for="descripcion">Descripción del problema</label>
+                <textarea id="descripcion" rows="4" placeholder="Describa el problema detalladamente"></textarea>
+
+                <label for="ubicacion">Ubicación</label>
+                <input type="text" id="ubicacion" placeholder="Dirección exacta">
+
+                <button id="btnReportar">Reportar problema</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Municipalidad de Escazú. Todos los derechos reservados.</p>
+    </footer>
 </body>
 <script type="module" src="../js/dashboard-ciudadano.js"></script>
 
