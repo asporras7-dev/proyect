@@ -562,7 +562,7 @@
   "publicos": [
     {
       "id": "7da0",
-      "tipoServicio": "aa",
+      "tipoServicio": "a",
       "descripcion": "rural",
       "responsable": "admin",
       "estado": "Pendiente"
@@ -762,6 +762,28 @@
       "descripcion": "dsdsds",
       "responsable": "admin",
       "estado": "listo"
+    }
+  ],
+  "empleados": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "puesto": "Contable",
+      "departamento": "Finanzas",
+      "salarioBase": "1000000",
+      "horasExtra": "10",
+      "rebajos": "5",
+      "salarioNeto": "900000"
+    },
+    {
+      "nombre": "Maria",
+      "puesto": "Contable",
+      "departamento": "Finanzas",
+      "salarioBase": "1000000",
+      "horasExtra": "10",
+      "rebajos": "5",
+      "salarioNeto": "900001",
+      "id": "2"
     }
   ]
 }

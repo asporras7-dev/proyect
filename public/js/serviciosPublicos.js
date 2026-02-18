@@ -141,11 +141,11 @@ btnEditar.addEventListener("click", async () => {
 
         p.textContent = `🔧 ${actualizado.tipoServicio} - ${actualizado.estado}`;
 
-        inputTipo.remove();
-        inputDescripcion.remove();
-        inputResponsable.remove();
-        inputEstado.remove();
-        btnConfirmar.remove();
+        inputTipo.style.display = "none";
+        inputDescripcion.style.display = "none";
+        inputResponsable.style.display = "none";
+        inputEstado.style.display = "none";
+        btnConfirmar.style.display = "none";
 
                 Swal.fire({
                     title: "¡Actualizado!",
