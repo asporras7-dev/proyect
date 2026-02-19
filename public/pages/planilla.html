@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Planilla</title>
+
+</head>
+
+<body>
+    <h1>Registro de Planillas</h1>
+    <div>
+        <label>Datos de empleado</label>
+        <input type="text" id="empleado">
+
+        <label>Puesto</label>
+        <input type="text" id="puesto">
+
+        <label>Departamento</label>
+        <input type="text" id="departamento">
+
+        <label>Salario base</label>
+        <input type="text" id="salarioBase">
+
+        <label>Horas extra</label>
+        <input type="text" id="horasExtra">
+
+        <label>Rebajos</label>
+        <input type="text" id="rebajos">
+
+        <label>Horas mensuales</label>
+        <input type="text" id="horasMensuales">
+
+        <label for="precioHora">Precio por hora</label>
+        <input type="text" id="precioHora">
+
+
+    </div>
+
+    <button type="button" id="btnGuardar">Guardar</button>
+
+    <button type="button" id="btnVer">Ver Planilla</button>
+
+
+    <div>
+        <table border="1" id="tablaPlanilla">
+            <tr>
+                <th>Nombre</th>
+                <th>Puesto</th>
+                <th>Departamento</th>
+                <th>Salario base</th>
+                <th>Horas extra</th>
+                <th>Rebajos</th>
+                <th>Salario Neto</th>
+            </tr>
+        </table>
+    </div>
+
+    <button type="button" id="btnActualizar">Actualizar Planilla</button>
+    <button type="button" id="btnEliminar">Eliminar Planilla</button>
+
+    <script type="module" src="../js/planilla.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>

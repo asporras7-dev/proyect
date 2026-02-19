@@ -49,7 +49,7 @@
       "tipo": "",
       "descripcion": "Bache en la avenida central",
       "ubicacion": "",
-      "estado": "completado",
+      "estado": "pendiente",
       "id": "3fe9"
     }
   ],
@@ -565,132 +565,6 @@
       "tipoServicio": "a",
       "descripcion": "rural",
       "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "350a",
-      "tipoServicio": "publico",
-      "descripcion": "obra rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "bc77",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "fc5b",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "fa85",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "9a48",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "16ea",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "efa7",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "7c23",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "22ae",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "8804",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "2bec",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "95fc",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "a968",
-      "tipoServicio": "publico",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "8204",
-      "tipoServicio": "dsdsd",
-      "descripcion": "dsdsds",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "bb84",
-      "tipoServicio": "dsdsd",
-      "descripcion": "dsdsds",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "bf02",
-      "tipoServicio": "dsdsd",
-      "descripcion": "dsdsds",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "2e9b",
-      "tipoServicio": "obras de construcción",
-      "descripcion": "rural",
-      "responsable": "admin",
-      "estado": "Pendiente"
-    },
-    {
-      "id": "baa9",
-      "tipoServicio": "publico",
-      "descripcion": "dsdsds",
-      "responsable": "dsds",
       "estado": "listo"
     },
     {
@@ -784,6 +658,58 @@
       "rebajos": 5,
       "salarioNeto": 0,
       "id": "2"
+    }
+  ],
+  "planillas": [
+    {
+      "id": "ed03",
+      "datoEmpleado": "Ana",
+      "puesto": "tecnico",
+      "departamento": "ventas",
+      "salarioInteligente": 200,
+      "horasExtra": 2,
+      "rebajos": 10,
+      "salarioNeto": 192
+    },
+    {
+      "id": "00ea",
+      "datoEmpleado": "Ana",
+      "puesto": "tecnico",
+      "departamento": "ventas",
+      "salarioInteligente": 200,
+      "horasExtra": 2,
+      "rebajos": 10,
+      "salarioNeto": 192
+    },
+    {
+      "id": "8e7b",
+      "datoEmpleado": "Pedro",
+      "puesto": "tecni",
+      "departamento": "ventas",
+      "salarioInteligente": 300,
+      "horasExtra": 4,
+      "rebajos": 10,
+      "salarioNeto": 294
+    },
+    {
+      "id": "89c5",
+      "datoEmpleado": "Pedro",
+      "puesto": "tecni",
+      "departamento": "ventas",
+      "salarioInteligente": 300,
+      "horasExtra": 4,
+      "rebajos": 10,
+      "salarioNeto": 294
+    },
+    {
+      "id": "fd8b",
+      "datoEmpleado": "mari",
+      "puesto": "admin",
+      "departamento": "ti",
+      "salarioInteligente": 300,
+      "horasExtra": 10,
+      "rebajos": 4,
+      "salarioNeto": 306
     }
   ]
 }

@@ -24,7 +24,7 @@ async function guardarUsuarios() {
         contrasenha: contrasenha.value,
         rol: "ciudadano"
     }
-
+   
     const usuariosRegistrados = await getUsuarios()
 
     const correoExiste = usuariosRegistrados.find((usuario) => usuario.correo === correo.value)

@@ -2,13 +2,13 @@ import { postServicio, getServicio, getServicioById, patchServicio, deleteServic
 
 // DOM
 const nombreProyecto = document.getElementById("nombreProyecto");
-const descripcion    = document.getElementById("decripcion");
-const presupuesto    = document.getElementById("presupuesto");
-const fecha          = document.getElementById("fecha");
-const estado         = document.getElementById("estado");
-const guardar        = document.getElementById("guardar");
-const mensaje        = document.getElementById("mensaje");
-const fechaBuscar    = document.getElementById("fechaBuscar");
+const descripcion = document.getElementById("decripcion");
+const presupuesto = document.getElementById("presupuesto");
+const fecha = document.getElementById("fecha");
+const estado = document.getElementById("estado");
+const guardar = document.getElementById("guardar");
+const mensaje = document.getElementById("mensaje");
+const fechaBuscar = document.getElementById("fechaBuscar");
 const btnBuscarFecha = document.getElementById("btnBuscarFecha");
 const divBusqueda = document.getElementById("divBusqueda");
 const btnMostrar = document.getElementById("Mostrar");
