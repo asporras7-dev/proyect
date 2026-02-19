@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proyectos Viales</title>
+</head>
+
+<body>
+    <h2>Gestión de Proyectos Viales</h2>
+    <label>Nombre del proyecto:</label>
+    <input type="text" id="nombreProyecto"><br><br>
+    <label>Decripción:</label>
+    <input type="text" id="decripcion"><br><br>
+
+    <label>Presupuesto</label>
+    <input type="text" id="presupuesto"><br><br>
+
+    <label>Fecha de inicio:</label>
+    <input type="date" id="fecha"><br><br>
+    <label>Estado</label>
+    <input type="text" id="estado"> <br><br>
+    <button type="button" id="guardar">Registrar Proyecto</button><br>
+    <div id="mensaje"></div><br>
+    <h4>Buscar Proyecto por fecha</h4> <br>
+    <input type="date" id="fechaBuscar">
+    <button type="button" id="btnBuscarFecha">Buscar proyecto</button>
+    <div id="divBusqueda"></div> <br><br>
+    <button type="button" id="Mostrar"> Mostrar todos los proyectos </button>
+    <div id="divProyecto"></div>
+
+    <script type="module" src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

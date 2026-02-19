@@ -89,15 +89,633 @@
       "presupuesto": "21212",
       "fecha": "2026-02-10",
       "estado": "En Proceso"
+    },
+    {
+      "id": "c1c3",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Nuevo",
+      "presupuesto": "77",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "3372",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Nuevo",
+      "presupuesto": "77",
+      "fecha": "2026-02-12",
+      "estado": "Listo"
+    },
+    {
+      "id": "c288",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Nuevo",
+      "presupuesto": "77",
+      "fecha": "2026-02-12",
+      "estado": "Listo"
+    },
+    {
+      "id": "2dfd",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Nuevo",
+      "presupuesto": "77",
+      "fecha": "2026-02-12",
+      "estado": "Listo"
+    },
+    {
+      "id": "cf3f",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Nuevo",
+      "presupuesto": "77",
+      "fecha": "2026-02-12",
+      "estado": "Listo"
+    },
+    {
+      "id": "a448",
+      "nombreProyecto": "",
+      "descripcion": "",
+      "presupuesto": "",
+      "fecha": "",
+      "estado": ""
+    },
+    {
+      "id": "8a09",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Municipal",
+      "presupuesto": "1909",
+      "fecha": "2026-02-19",
+      "estado": "Listo"
+    },
+    {
+      "id": "0872",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Listo",
+      "presupuesto": "1111",
+      "fecha": "2026-02-02",
+      "estado": "Listo"
+    },
+    {
+      "id": "8369",
+      "nombreProyecto": "Obra",
+      "descripcion": "Contrato",
+      "presupuesto": "333",
+      "fecha": "2026-02-02",
+      "estado": "Listo"
+    },
+    {
+      "id": "384d",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-03",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "57a6",
+      "nombreProyecto": "Ciudad nueva",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-04",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "9153",
+      "nombreProyecto": "Ciudad dos",
+      "descripcion": "dos",
+      "presupuesto": "dado",
+      "fecha": "2026-02-09",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "156d",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Listo",
+      "presupuesto": "1111",
+      "fecha": "2026-02-19",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "9599",
+      "nombreProyecto": "ciudad tres",
+      "descripcion": "tres",
+      "presupuesto": "dado",
+      "fecha": "2026-02-09",
+      "estado": "hecho"
+    },
+    {
+      "id": "75e3",
+      "nombreProyecto": "ciudad tres",
+      "descripcion": "tres",
+      "presupuesto": "dado",
+      "fecha": "2026-02-09",
+      "estado": "hecho"
+    },
+    {
+      "id": "feef",
+      "nombreProyecto": "Civil dos",
+      "descripcion": "dos",
+      "presupuesto": "dado",
+      "fecha": "2026-02-05",
+      "estado": "Listo"
+    },
+    {
+      "id": "933c",
+      "nombreProyecto": "Civil",
+      "descripcion": "Listo",
+      "presupuesto": "1234",
+      "fecha": "2026-02-05",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "f6e8",
+      "nombreProyecto": "",
+      "descripcion": "",
+      "presupuesto": "",
+      "fecha": "",
+      "estado": ""
+    },
+    {
+      "id": "9911",
+      "nombreProyecto": "Civil",
+      "descripcion": "Listo",
+      "presupuesto": "1111",
+      "fecha": "2026-02-20",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "a149",
+      "nombreProyecto": "casa",
+      "descripcion": "dos",
+      "presupuesto": "dado",
+      "fecha": "2026-02-06",
+      "estado": "Listo"
+    },
+    {
+      "id": "ea20",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "cuatro",
+      "presupuesto": "dado",
+      "fecha": "2026-02-20",
+      "estado": "Listo"
+    },
+    {
+      "id": "e7c2",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "ddd",
+      "fecha": "2026-02-07",
+      "estado": "Listo"
+    },
+    {
+      "id": "701e",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "ddd",
+      "fecha": "2026-02-07",
+      "estado": "Listo"
+    },
+    {
+      "id": "1eed",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "dos",
+      "presupuesto": "dado",
+      "fecha": "2026-02-05",
+      "estado": "hecho"
+    },
+    {
+      "id": "a019",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "dos",
+      "presupuesto": "dado",
+      "fecha": "2026-02-05",
+      "estado": "hecho"
+    },
+    {
+      "id": "9185",
+      "nombreProyecto": "Civil",
+      "descripcion": "dos",
+      "presupuesto": "dado",
+      "fecha": "2026-02-02",
+      "estado": "Listo"
+    },
+    {
+      "id": "69d2",
+      "nombreProyecto": "Civil",
+      "descripcion": "dos",
+      "presupuesto": "dado",
+      "fecha": "2026-02-02",
+      "estado": "Listo"
+    },
+    {
+      "id": "fd5b",
+      "nombreProyecto": "Ciudad Cuatro",
+      "descripcion": "celeste",
+      "presupuesto": "dado",
+      "fecha": "2026-02-05",
+      "estado": "listo"
+    },
+    {
+      "id": "4439",
+      "nombreProyecto": "Hola",
+      "descripcion": "verde",
+      "presupuesto": "dado",
+      "fecha": "2026-02-05",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "d0a1",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Listo"
+    },
+    {
+      "id": "ae5f",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Listo",
+      "presupuesto": "dddd",
+      "fecha": "2026-02-05",
+      "estado": "Listo"
+    },
+    {
+      "id": "b0a2",
+      "nombreProyecto": "Civil",
+      "descripcion": "Listo",
+      "presupuesto": "si",
+      "fecha": "2026-02-05",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "30e5",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Listo",
+      "presupuesto": "sasas",
+      "fecha": "2026-02-06",
+      "estado": "Listo"
+    },
+    {
+      "id": "1a16",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Listo"
+    },
+    {
+      "id": "cffc",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-26",
+      "estado": "Listo"
+    },
+    {
+      "id": "e4e5",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1111",
+      "fecha": "",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "5b98",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "01ab",
+      "nombreProyecto": "Ciudad",
+      "descripcion": "Municipal",
+      "presupuesto": "1111",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "6643",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "cdce",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-04",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "9e7f",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "c238",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-04",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "6dbe",
+      "nombreProyecto": "obras",
+      "descripcion": "obras",
+      "presupuesto": "1234",
+      "fecha": "2026-02-02",
+      "estado": "listo"
+    },
+    {
+      "id": "9684",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "b04b",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "ad3b",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "2653",
+      "nombreProyecto": "obras",
+      "descripcion": "Listo",
+      "presupuesto": "1234",
+      "fecha": "2026-02-20",
+      "estado": "Listo"
+    },
+    {
+      "id": "a1ca",
+      "nombreProyecto": "obras",
+      "descripcion": "Listo",
+      "presupuesto": "1234",
+      "fecha": "2026-02-20",
+      "estado": "Listo"
+    },
+    {
+      "id": "fdcd",
+      "nombreProyecto": "obras",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "listo"
+    },
+    {
+      "id": "2ea0",
+      "nombreProyecto": "Civil",
+      "descripcion": "Listo",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "listo"
+    },
+    {
+      "id": "8fa9",
+      "nombreProyecto": "Civil",
+      "descripcion": "obras",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "9899",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "167c",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "4587",
+      "nombreProyecto": "obras",
+      "descripcion": "obras",
+      "presupuesto": "1111",
+      "fecha": "2026-02-09",
+      "estado": "Listo"
+    },
+    {
+      "id": "c08c",
+      "nombreProyecto": "obras",
+      "descripcion": "Municipal",
+      "presupuesto": "1111",
+      "fecha": "2026-02-05",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "3742",
+      "nombreProyecto": "Civil ciudad",
+      "descripcion": "ciudades",
+      "presupuesto": "10",
+      "fecha": "2026-02-12",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "2f33",
+      "nombreProyecto": "obra de constru",
+      "descripcion": "constru",
+      "presupuesto": "11",
+      "fecha": "2026-02-05",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "d033",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-11",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "0c7c",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "1bab",
+      "nombreProyecto": "Civil",
+      "descripcion": "Municipal",
+      "presupuesto": "1234",
+      "fecha": "2026-02-06",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "079c",
+      "nombreProyecto": "obras ciudad",
+      "descripcion": "muni",
+      "presupuesto": "1111",
+      "fecha": "2026-02-02",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "12d2",
+      "nombreProyecto": "obras ciudad",
+      "descripcion": "muni",
+      "presupuesto": "1111",
+      "fecha": "2026-02-02",
+      "estado": "Pendiente"
     }
   ],
   "publicos": [
     {
-      "id": "9f8f",
+      "id": "7da0",
       "tipoServicio": "publico",
       "descripcion": "rural",
-      "responsable": "admi",
+      "responsable": "admin",
       "estado": "listo"
+    },
+    {
+      "id": "f0c8",
+      "tipoServicio": "publico",
+      "descripcion": "dsdsds",
+      "responsable": "admin",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "c987",
+      "tipoServicio": "dsdsd",
+      "descripcion": "rural",
+      "responsable": "admin",
+      "estado": "listo"
+    },
+    {
+      "id": "4026",
+      "tipoServicio": "matas verdes",
+      "descripcion": "rural",
+      "responsable": "admin",
+      "estado": "listo"
+    },
+    {
+      "id": "3f1f",
+      "tipoServicio": "NFL",
+      "descripcion": "rural",
+      "responsable": "admin",
+      "estado": "Listo"
+    },
+    {
+      "id": "8722",
+      "tipoServicio": "NFL",
+      "descripcion": "rural",
+      "responsable": "admin",
+      "estado": "Listo"
+    },
+    {
+      "id": "4bd9",
+      "tipoServicio": "publico",
+      "descripcion": "rural",
+      "responsable": "admin",
+      "estado": "listo"
+    },
+    {
+      "id": "ca7f",
+      "tipoServicio": "publico",
+      "descripcion": "dsdsds",
+      "responsable": "admin",
+      "estado": "Listo"
+    },
+    {
+      "id": "d2ea",
+      "tipoServicio": "cosntruccion",
+      "descripcion": "vial",
+      "responsable": "tecnico",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "5eec",
+      "tipoServicio": "servicio de construccion",
+      "descripcion": "vial",
+      "responsable": "tec",
+      "estado": "listo"
+    },
+    {
+      "id": "0add",
+      "tipoServicio": "dsdsd",
+      "descripcion": "dsdsds",
+      "responsable": "admin",
+      "estado": "listo"
+    }
+  ],
+  "planillas": [
+    {
+      "id": "ed03",
+      "datoEmpleado": "Ana",
+      "puesto": "tecnico",
+      "departamento": "ventas",
+      "salarioBase": 200,
+      "horasExtra": 2,
+      "rebajos": 10,
+      "salarioNeto": 192
+    },
+    {
+      "id": "00ea",
+      "datoEmpleado": "Ana",
+      "puesto": "tecnico",
+      "departamento": "ventas",
+      "salarioBase": 200,
+      "horasExtra": 2,
+      "rebajos": 10,
+      "salarioNeto": 192
+    },
+    {
+      "id": "8e7b",
+      "datoEmpleado": "Pedro",
+      "puesto": "tecni",
+      "departamento": "ventas",
+      "salarioBase": 300,
+      "horasExtra": 4,
+      "rebajos": 10,
+      "salarioNeto": 294
+    },
+    {
+      "id": "89c5",
+      "datoEmpleado": "Pedro",
+      "puesto": "tecni",
+      "departamento": "ventas",
+      "salarioBase": 300,
+      "horasExtra": 4,
+      "rebajos": 10,
+      "salarioNeto": 294
+    },
+    {
+      "id": "fd8b",
+      "datoEmpleado": "mari",
+      "puesto": "admin",
+      "departamento": "ti",
+      "salarioBase": 300,
+      "horasExtra": 10,
+      "rebajos": 4,
+      "salarioNeto": 306
     }
   ]
 }

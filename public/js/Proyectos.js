@@ -2,17 +2,17 @@ import { postServicio, getServicio, getServicioById, patchServicio, deleteServic
 
 // DOM
 const nombreProyecto = document.getElementById("nombreProyecto");
-const descripcion    = document.getElementById("descripcion");
-const presupuesto    = document.getElementById("presupuesto");
-const fecha          = document.getElementById("fecha");
-const estado         = document.getElementById("estado");
-const guardar        = document.getElementById("guardar");
-const mensaje        = document.getElementById("mensaje");
-const fechaBuscar    = document.getElementById("fechaBuscar");
+const descripcion = document.getElementById("decripcion");
+const presupuesto = document.getElementById("presupuesto");
+const fecha = document.getElementById("fecha");
+const estado = document.getElementById("estado");
+const guardar = document.getElementById("guardar");
+const mensaje = document.getElementById("mensaje");
+const fechaBuscar = document.getElementById("fechaBuscar");
 const btnBuscarFecha = document.getElementById("btnBuscarFecha");
-const divBusqueda    = document.getElementById("divBusqueda");
-const btnMostrar     = document.getElementById("Mostrar");
-const divProyecto    = document.getElementById("divProyecto");
+const divBusqueda = document.getElementById("divBusqueda");
+const btnMostrar = document.getElementById("Mostrar");
+const divProyecto = document.getElementById("divProyecto");
 
 
 // EVENTO - Registrar proyecto (POST)
@@ -23,22 +23,27 @@ guardar.addEventListener("click", async function () {
     }
     const viales = {
         nombreProyecto: nombreProyecto.value,
-        descripcion:    descripcion.value,
-        presupuesto:    presupuesto.value,
-        fecha:          fecha.value,
-        estado:         estado.value
+        descripcion: descripcion.value,
+        presupuesto: presupuesto.value,
+        fecha: fecha.value,
+        estado: estado.value
     };
 
     console.log("1. Enviando proyecto al servidor...", viales);
     const resultado = await postServicio(viales);
     console.log("2. El servidor respondió con:", resultado);
     if (resultado && resultado.id) {
-        mensaje.textContent = "✅ Proyecto registrado con éxito";
+        Swal.fire({
+            title: "¡Éxito!",
+            text: "Proyecto registrado con éxito",
+            icon: "success",
+            confirmButtonText: "Aceptar"
+        });
     }
 });
 
 
-// EVENTO - Buscar proyecto por fecha
+// EVENTO - FECHA
 btnBuscarFecha.addEventListener("click", async () => {
 
     if (!fechaBuscar.value) {
@@ -64,25 +69,25 @@ btnBuscarFecha.addEventListener("click", async () => {
     }
 });
 
-// EVENTO - Mostrar todos los proyectos (GET)
+// EVENTO - MOSTRAR TODOS LOS PROYECTOS (GET)
 btnMostrar.addEventListener("click", async function () {
 
-    divProyecto.innerHTML = "";
+    divProyecto.textContent = "";
 
     const resultado = await getServicio();
 
     resultado.forEach((proyecto) => {
 
         const div = document.createElement("div");
-        const p   = document.createElement("p");
+        const p = document.createElement("p");
 
-        const btnDetalle  = document.createElement("button");
-        const btnEditar   = document.createElement("button");
+        const btnDetalle = document.createElement("button");
+        const btnEditar = document.createElement("button");
         const btnEliminar = document.createElement("button");
 
-        p.textContent           = `📋 ${proyecto.nombreProyecto} - Estado: ${proyecto.estado}`;
-        btnDetalle.textContent  = "Ver detalle";
-        btnEditar.textContent   = "Editar estado";
+        p.textContent = `📋 ${proyecto.nombreProyecto} - Estado: ${proyecto.estado}`;
+        btnDetalle.textContent = "Ver detalle";
+        btnEditar.textContent = "Editar estado";
         btnEliminar.textContent = "Eliminar";
 
         div.appendChild(p);
@@ -95,58 +100,119 @@ btnMostrar.addEventListener("click", async function () {
         // GET por ID - Ver detalle del proyecto
         btnDetalle.addEventListener("click", async () => {
             const detalle = await getServicioById(proyecto.id);
-            alert(
-                `📌 Nombre: ${detalle.nombreProyecto}\n` +
-                `📝 Descripción: ${detalle.descripcion}\n` +
-                `💰 Presupuesto: ${detalle.presupuesto}\n` +
-                `📅 Fecha: ${detalle.fecha}\n` +
-                `🔄 Estado: ${detalle.estado}`
-            );
+
+            // Limpiar detalles previos
+            const detalleAnterior = div.querySelector(".detalle-info");
+            if (detalleAnterior) detalleAnterior.remove();
+
+            const divDetalle = document.createElement("div");
+            divDetalle.className = "detalle-info"; // agregar la clase para que sea
+
+            divDetalle.innerHTML = `
+        <p>📌 Nombre: ${detalle.nombreProyecto}</p>
+        <p>📝 Descripción: ${detalle.descripcion}</p>
+        <p>💰 Presupuesto: ${detalle.presupuesto}</p>
+        <p>📅 Fecha: ${detalle.fecha}</p>
+        <p>🔄 Estado: ${detalle.estado}</p>
+    `;
+
+            div.appendChild(divDetalle);
         });
 
 
-        // PATCH - Editar solo el estado del proyecto
-        btnEditar.addEventListener("click", async () => {
-            console.log(proyecto.id);
+      // PATCH - Editar todos los campos del proyecto
+btnEditar.addEventListener("click", async () => {
+    console.log(proyecto.id);
 
-            const selectEstado = document.createElement("select");
-            const btnConfirmar = document.createElement("button");
-            btnConfirmar.textContent = "Confirmar edición";
+    // Limpiar detalles si existen
+    const detalleAnterior = div.querySelector(".detalle-info");
+    if (detalleAnterior) detalleAnterior.remove();
 
-            ["Pendiente", "En Proceso", "Resuelto"].forEach((opcion) => {
-                const opt       = document.createElement("option");
-                opt.value       = opcion;
-                opt.textContent = opcion;
-                selectEstado.appendChild(opt);
-            });
+    const inputNombre       = document.createElement("input");
+    const inputDescripcion  = document.createElement("input");
+    const inputPresupuesto  = document.createElement("input");
+    const inputFecha        = document.createElement("input");
+    const inputEstado       = document.createElement("input");
+    const btnConfirmar      = document.createElement("button");
 
-            div.appendChild(selectEstado);
-            div.appendChild(btnConfirmar);
+    inputNombre.value       = proyecto.nombreProyecto;
+    inputDescripcion.value  = proyecto.descripcion;
+    inputPresupuesto.value  = proyecto.presupuesto;
+    inputFecha.type         = "date";
+    inputFecha.value        = proyecto.fecha;
+    inputEstado.value       = proyecto.estado;
+    btnConfirmar.textContent = "Confirmar edición";
 
-            btnConfirmar.addEventListener("click", async () => {
-                const estadoActualizado = {
-                    estado: selectEstado.value
-                };
+    div.appendChild(document.createElement("br")); // <-- Primera separación
+    div.appendChild(document.createElement("br")); // <-- Segunda separación
+    div.appendChild(inputNombre);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputDescripcion);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputPresupuesto);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputFecha);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(inputEstado);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(btnConfirmar);
 
-                await patchServicio(estadoActualizado, proyecto.id);
-                console.log("Estado actualizado a:", selectEstado.value);
+    btnConfirmar.addEventListener("click", async () => {
+        const actualizado = {
+            nombreProyecto: inputNombre.value,
+            descripcion:    inputDescripcion.value,
+            presupuesto:    inputPresupuesto.value,
+            fecha:          inputFecha.value,
+            estado:         inputEstado.value
+        };
 
-                p.textContent = `📋 ${proyecto.nombreProyecto} - Estado: ${selectEstado.value}`;
-                selectEstado.remove();
-                btnConfirmar.remove();
+        await patchServicio(actualizado, proyecto.id);
+
+        p.textContent = `📋 ${actualizado.nombreProyecto} - Estado: ${actualizado.estado}`;
+
+        inputNombre.remove();
+        inputDescripcion.remove();
+        inputPresupuesto.remove();
+        inputFecha.remove();
+        inputEstado.remove();
+        btnConfirmar.remove();
+                // Sweet Alert
+    Swal.fire({
+        title: "¡Actualizado!",
+        text: "El proyecto se actualizó con éxito",
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false
             });
         });
-
+        });
 
         // DELETE - Eliminar proyecto
         btnEliminar.addEventListener("click", async () => {
-            const confirmar = confirm(`¿Seguro que deseas eliminar "${proyecto.nombreProyecto}"?`);
 
-            if (confirmar) {
-                await deleteServicio(proyecto.id);
-                console.log("Eliminado, ID:", proyecto.id);
-                div.remove();
-            }
+            Swal.fire({
+                title: "¿Estás seguro?",
+                text: `Se eliminará el proyecto "${proyecto.nombreProyecto}"`,
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, eliminar",
+                cancelButtonText: "Cancelar",
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6"
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    await deleteServicio(proyecto.id);
+                    console.log("Eliminado, ID:", proyecto.id);
+                    div.remove();
+
+                    Swal.fire({
+                        title: "¡Eliminado!",
+                        text: "El proyecto ha sido eliminado con éxito",
+                        icon: "success",
+                        confirmButtonText: "Aceptar"
+                    });
+                }
+            });
         });
 
     });
