@@ -672,7 +672,7 @@
       "datoEmpleado": "Ana",
       "puesto": "tecnico",
       "departamento": "ventas",
-      "salarioBase": 200,
+      "salarioInteligente": 200,
       "horasExtra": 2,
       "rebajos": 10,
       "salarioNeto": 192
@@ -682,7 +682,7 @@
       "datoEmpleado": "Ana",
       "puesto": "tecnico",
       "departamento": "ventas",
-      "salarioBase": 200,
+      "salarioInteligente": 200,
       "horasExtra": 2,
       "rebajos": 10,
       "salarioNeto": 192
@@ -692,7 +692,7 @@
       "datoEmpleado": "Pedro",
       "puesto": "tecni",
       "departamento": "ventas",
-      "salarioBase": 300,
+      "salarioInteligente": 300,
       "horasExtra": 4,
       "rebajos": 10,
       "salarioNeto": 294
@@ -702,7 +702,7 @@
       "datoEmpleado": "Pedro",
       "puesto": "tecni",
       "departamento": "ventas",
-      "salarioBase": 300,
+      "salarioInteligente": 300,
       "horasExtra": 4,
       "rebajos": 10,
       "salarioNeto": 294
@@ -712,7 +712,7 @@
       "datoEmpleado": "mari",
       "puesto": "admin",
       "departamento": "ti",
-      "salarioBase": 300,
+      "salarioInteligente": 300,
       "horasExtra": 10,
       "rebajos": 4,
       "salarioNeto": 306

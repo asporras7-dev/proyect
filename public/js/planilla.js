@@ -1,4 +1,4 @@
-import { postPlanilla } from "../services/planilla.js";
+import { postPlanilla, getPlanilla } from "../services/planilla.js";
 
 //DOM
 const datoEmpleado = document.getElementById("empleado");
@@ -8,6 +8,7 @@ const salarioBase = document.getElementById("salarioBase");
 const horasExtra = document.getElementById("horasExtra");
 const rebajos = document.getElementById("rebajos");
 const salarioNeto = document.getElementById("salarioNeto");
+const horasMensuales = document.getElementById("horasMensuales");
 const btnGuardar = document.getElementById("btnGuardar");
 const btnVer = document.getElementById("btnVer");
 const btnActualizar = document.getElementById("btnActualizar");
@@ -24,15 +25,16 @@ btnGuardar.addEventListener("click", async function () {
     // Cálculo automático del salario neto
     const calculoSalarioNeto = parseFloat(salarioBase.value) + parseFloat(horasExtra.value) - parseFloat(rebajos.value);
     salarioNeto.value = calculoSalarioNeto;
-    
+
 
     const info = {
         datoEmpleado: datoEmpleado.value,
         puesto: puesto.value,
         departamento: departamento.value,
         salarioBase: parseFloat(salarioBase.value), // parseFloat para convertir a número
-        horasExtra: parseFloat(horasExtra.value),   
-        rebajos: parseFloat(rebajos.value),         
+        horasExtra: parseFloat(horasExtra.value),
+        rebajos: parseFloat(rebajos.value),
+        horasMensuales: parseFloat(horasMensuales.value),
         salarioNeto: calculoSalarioNeto
     };
 
@@ -49,4 +51,47 @@ btnGuardar.addEventListener("click", async function () {
     }
 });
 
+//GET
+
+async function llenarPlanilla() {
+
+    const tabla = document.getElementById("tablaPlanilla");
+    const datosPlanilla = await getPlanilla();
+
+    datosPlanilla.forEach((planilla) => {
+        const fila = document.createElement("tr");
+        const tdNombre = document.createElement("td")
+        const tdPuesto = document.createElement("td")
+        const tdDepartamento = document.createElement("td")
+        const tdSalarioBase = document.createElement("td")
+        const tdHorasExtra = document.createElement("td")
+        const tdRebajos = document.createElement("td")
+        const tdSalarioNeto = document.createElement("td")
+        const tdMontoHoras = document.createElement("td")
+
+        tdNombre.style.cursor = "pointer"
+
+
+        fila.appendChild(tdNombre);
+        fila.appendChild(tdPuesto);
+        fila.appendChild(tdDepartamento);
+        fila.appendChild(tdSalarioBase);
+        fila.appendChild(tdHorasExtra);
+        fila.appendChild(tdRebajos);
+        fila.appendChild(tdSalarioNeto);
+
+        tabla.appendChild(fila);
+
+        tdNombre.textContent = planilla.datoEmpleado;
+        tdPuesto.textContent = planilla.puesto;
+        tdDepartamento.textContent = planilla.departamento;
+        tdSalarioBase.textContent = planilla.salarioInteligente;
+        tdHorasExtra.textContent = planilla.horasExtra;
+        tdRebajos.textContent = planilla.rebajos;
+        tdSalarioNeto.textContent = planilla.salarioInteligente - planilla.rebajos;
+    });
+
+}
+
+llenarPlanilla()
 //EVENTO BOTÓN VER PLANILLA
