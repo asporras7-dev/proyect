@@ -701,5 +701,57 @@
       "responsable": "admin",
       "estado": "listo"
     }
+  ],
+  "planillas": [
+    {
+      "id": "ed03",
+      "datoEmpleado": "Ana",
+      "puesto": "tecnico",
+      "departamento": "ventas",
+      "salarioBase": 200,
+      "horasExtra": 2,
+      "rebajos": 10,
+      "salarioNeto": 192
+    },
+    {
+      "id": "00ea",
+      "datoEmpleado": "Ana",
+      "puesto": "tecnico",
+      "departamento": "ventas",
+      "salarioBase": 200,
+      "horasExtra": 2,
+      "rebajos": 10,
+      "salarioNeto": 192
+    },
+    {
+      "id": "8e7b",
+      "datoEmpleado": "Pedro",
+      "puesto": "tecni",
+      "departamento": "ventas",
+      "salarioBase": 300,
+      "horasExtra": 4,
+      "rebajos": 10,
+      "salarioNeto": 294
+    },
+    {
+      "id": "89c5",
+      "datoEmpleado": "Pedro",
+      "puesto": "tecni",
+      "departamento": "ventas",
+      "salarioBase": 300,
+      "horasExtra": 4,
+      "rebajos": 10,
+      "salarioNeto": 294
+    },
+    {
+      "id": "fd8b",
+      "datoEmpleado": "mari",
+      "puesto": "admin",
+      "departamento": "ti",
+      "salarioBase": 300,
+      "horasExtra": 10,
+      "rebajos": 4,
+      "salarioNeto": 306
+    }
   ]
 }
