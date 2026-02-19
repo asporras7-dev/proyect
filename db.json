@@ -770,19 +770,19 @@
       "nombre": "Juan",
       "puesto": "Contable",
       "departamento": "Finanzas",
-      "salarioBase": "1000000",
-      "horasExtra": "10",
-      "rebajos": "5",
-      "salarioNeto": "900000"
+      "salarioBase": 1000000,
+      "horasExtra": 10,
+      "rebajos": 5,
+      "salarioNeto": 0
     },
     {
       "nombre": "Maria",
       "puesto": "Contable",
       "departamento": "Finanzas",
-      "salarioBase": "1000000",
-      "horasExtra": "10",
-      "rebajos": "5",
-      "salarioNeto": "900001",
+      "salarioBase": 1000000,
+      "horasExtra": 10,
+      "rebajos": 5,
+      "salarioNeto": 0,
       "id": "2"
     }
   ]

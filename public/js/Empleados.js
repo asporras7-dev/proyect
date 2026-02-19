@@ -1,6 +1,15 @@
 import {editarPlanilla, getPlanilla} from "../services/serviciosPlanilla.js";
 
 const div = document.getElementById("listaEmpleados");
+const nombre = document.getElementById("nombre");
+const puesto = document.getElementById("puesto");
+const departamento = document.getElementById("departamento");
+const salarioBase = document.getElementById("salarioBase");
+const horasExtra = document.getElementById("TotalhorasExtra");
+const rebajos = document.getElementById("Totalrebajos");
+const salarioNeto = document.getElementById("salarioNeto");
+const btnGetEmpleados = document.getElementById("btn-getEmpleados");
+
 
 async function mostrarEmpleados(){
     const data = await getPlanilla();
@@ -13,10 +22,17 @@ async function editarEmpleado(datos, id){
 
 async function renderizarEmpleados(){
     const data = await mostrarEmpleados();
+    const rebajo = 20000;
+    const valorHora = 5000;
+    const hoExtra = valorHora * 1.5;
     data.forEach(element=>{
-        const p =document.createElement("p");
-        p.textContent = element.nombre + " " + element.puesto + " " + element.departamento + " " + element.salarioBase + " " + element.horasExtra + " " + element.rebajos + " " + element.salarioNeto;
-        div.appendChild(p);
+        nombre.value = element.nombre;
+        puesto.value = element.puesto;
+        departamento.value = element.departamento;
+        salarioBase.value = element.salarioBase;
+        horasExtra.value = element.horasExtra * hoExtra;
+        rebajos.value = element.rebajos * rebajo;
+        salarioNeto.value = (parseInt(salarioBase.value) + parseInt(horasExtra.value)) - parseInt(rebajos.value);
         const btnEditar = document.createElement("button");
         btnEditar.textContent = "Editar"
         div.appendChild(btnEditar);
