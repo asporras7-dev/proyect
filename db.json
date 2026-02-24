@@ -662,54 +662,88 @@
   ],
   "planillas": [
     {
-      "id": "ed03",
-      "datoEmpleado": "Ana",
+      "nombre": "Ana",
       "puesto": "tecnico",
       "departamento": "ventas",
-      "salarioInteligente": 200,
+      "salarioBase": 100,
       "horasExtra": 2,
-      "rebajos": 10,
-      "salarioNeto": 192
-    },
-    {
-      "id": "00ea",
-      "datoEmpleado": "Ana",
-      "puesto": "tecnico",
-      "departamento": "ventas",
-      "salarioInteligente": 200,
-      "horasExtra": 2,
-      "rebajos": 10,
-      "salarioNeto": 192
+      "rebajos": 1,
+      "salarioNeto": 192,
+      "id": "00ea"
     },
     {
       "id": "8e7b",
-      "datoEmpleado": "Pedro",
+      "nombre": "Pedro",
       "puesto": "tecni",
       "departamento": "ventas",
-      "salarioInteligente": 300,
+      "salarioBase": 300,
       "horasExtra": 4,
       "rebajos": 10,
       "salarioNeto": 294
     },
     {
       "id": "89c5",
-      "datoEmpleado": "Pedro",
+      "nombre": "Pedro",
       "puesto": "tecni",
       "departamento": "ventas",
-      "salarioInteligente": 300,
+      "salarioBase": 300,
       "horasExtra": 4,
       "rebajos": 10,
       "salarioNeto": 294
     },
     {
       "id": "fd8b",
-      "datoEmpleado": "mari",
+      "nombre": "mari",
       "puesto": "admin",
       "departamento": "ti",
-      "salarioInteligente": 300,
+      "salarioBase": 300,
       "horasExtra": 10,
       "rebajos": 4,
       "salarioNeto": 306
+    },
+    {
+      "id": "539c",
+      "nombre": "a",
+      "puesto": "a",
+      "departamento": "a",
+      "salarioBase": 10,
+      "horasExtra": 10,
+      "rebajos": 10,
+      "horasMensuales": 10,
+      "salarioNeto": 10
+    },
+    {
+      "id": "ac78",
+      "nombre": "a",
+      "puesto": "a",
+      "departamento": "a",
+      "salarioBase": 1000000,
+      "horasExtra": 10,
+      "rebajos": 4,
+      "horasMensuales": 180,
+      "salarioNeto": 1000006
+    },
+    {
+      "id": "ae91",
+      "nombre": "a",
+      "puesto": "a",
+      "departamento": "a",
+      "salarioBase": 1000000,
+      "horasExtra": 10,
+      "rebajos": 4,
+      "horasMensuales": 180,
+      "salarioNeto": 1044000
+    },
+    {
+      "nombre": "Alejandra",
+      "puesto": "Contable",
+      "departamento": "Finanzas",
+      "salarioBase": 1000,
+      "horasExtra": 10,
+      "rebajos": 4,
+      "horasMensuales": 180,
+      "salarioNeto": 45000,
+      "id": "003e"
     }
   ]
 }

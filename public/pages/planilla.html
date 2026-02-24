@@ -10,37 +10,45 @@
 
 <body>
     <h1>Registro de Planillas</h1>
-    <div>
-        <label>Datos de empleado</label>
-        <input type="text" id="empleado">
+        <button id="btnPost">Registrar pago</button>
+        <div id="divPost">
+            <div>
+                <label>Datos de empleado</label>
+                <input type="text" id="empleado">
+            </div>
+            <div>
+                <label>Puesto</label>
+                <input type="text" id="puesto">
+            </div>
+            <div>
+                <label>Departamento</label>
+                <input type="text" id="departamento">
+            </div>
+            <div>
+                <label>Salario base</label>
+                <input type="text" id="salarioBase">
+            </div>
+            <div>
+                <label>Horas extra</label>
+                <input type="text" id="horasExtra">
+            </div>
+            <div>
+                <label>Rebajos</label>
+                <input type="text" id="rebajos">
+            </div>
+            <div>
+                <label>Horas mensuales</label>
+                <input type="text" id="horasMensuales">
+            </div>
+            <div>
+                <label for="precioHora">Precio por hora</label>
+                <input type="text" id="precioHora">
+            </div>
+            <button type="button" id="btnGuardar">Guardar</button>
+            <button type="button" id="btnVer">Ver Planilla</button>
+            <button type="button" id="btnCancelar">Cancelar</button>
+        </div>
 
-        <label>Puesto</label>
-        <input type="text" id="puesto">
-
-        <label>Departamento</label>
-        <input type="text" id="departamento">
-
-        <label>Salario base</label>
-        <input type="text" id="salarioBase">
-
-        <label>Horas extra</label>
-        <input type="text" id="horasExtra">
-
-        <label>Rebajos</label>
-        <input type="text" id="rebajos">
-
-        <label>Horas mensuales</label>
-        <input type="text" id="horasMensuales">
-
-        <label for="precioHora">Precio por hora</label>
-        <input type="text" id="precioHora">
-
-
-    </div>
-
-    <button type="button" id="btnGuardar">Guardar</button>
-
-    <button type="button" id="btnVer">Ver Planilla</button>
 
 
     <div>
@@ -59,6 +67,10 @@
 
     <button type="button" id="btnActualizar">Actualizar Planilla</button>
     <button type="button" id="btnEliminar">Eliminar Planilla</button>
+
+    <div id="divActualizar"></div>
+    <div id="divEliminar"></div>
+    <div id="divFoto"></div>
 
     <script type="module" src="../js/planilla.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

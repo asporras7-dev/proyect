@@ -35,4 +35,35 @@ async function postPlanilla(info) {
     }
 }
 
-export { postPlanilla, getPlanilla };
+async function editarPlanilla(datos, id) {
+    try{
+        const planilla = await fetch("http://localhost:3001/planillas/"+id,{
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(datos)
+    });
+    const data = await planilla.json();
+    return data;
+    }catch(error){
+        throw new Error("Error al editar el empleado");
+    }
+}
+
+async function eliminarPlanilla(id){
+    try{
+        const planilla =await fetch("http://localhost:3001/planillas/"+id,{
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        })
+        const data = await planilla.json();
+        return data
+    }catch(error){
+        throw new Error("Error al eliminar el empleado");
+    }
+}
+
+export { postPlanilla, getPlanilla, editarPlanilla, eliminarPlanilla };
